@@ -40,7 +40,7 @@ const App = () => {
     <AppContainer>
       <GlobalStyles />
 
-      {page === "home" && <Homepage />}
+      {page === "home" && <Homepage handleSwitchPage={handleSwitchPage} />}
       {page === "about" && <About />}
       {page === "portfolio" && <Portfolio />}
       {page === "contact" && <Contact />}

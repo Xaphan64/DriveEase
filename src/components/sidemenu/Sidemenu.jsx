@@ -6,7 +6,7 @@ import DraftsIcon from "@mui/icons-material/Drafts";
 
 // STYLES
 import { SidemenuContainer } from "./Sidemenu.style";
-import { StyledButton } from "../atoms/Button/Button.style";
+import { StyledButton, ButtonText } from "../atoms/Button/Button.style";
 
 // LIBRARIES
 
@@ -29,20 +29,24 @@ const Sidemenu = ({ handleSwitchPage }) => {
   // EVENT HANDLERS
   return (
     <SidemenuContainer>
-      <button onClick={() => handleSwitchPage("home")}>Home</button>
-      <button onClick={() => handleSwitchPage("about")}>About</button>
-      <button onClick={() => handleSwitchPage("portfolio")}>Portfolio</button>
-      <button onClick={() => handleSwitchPage("contact")}>Contact</button>
-
-      {/* <Button buttonIcon="test" onClick={() => handleSwitchPage("home")} /> */}
-      <StyledButton onClick={() => handleSwitchPage("home")} backgroundColor="gray">
-        <span>HOME</span>
-        <HomeIcon id="icon" />
+      <StyledButton onClick={() => handleSwitchPage("home")} backgroundColor="#2b2a2a">
+        <ButtonText>HOME</ButtonText>
+        <HomeIcon />
       </StyledButton>
 
-      <StyledButton onClick={() => handleSwitchPage("home")} backgroundColor="gray">
-        <span>HOME</span>
-        <HomeIcon />
+      <StyledButton onClick={() => handleSwitchPage("about")} backgroundColor="#2b2a2a">
+        <ButtonText>ABOUT</ButtonText>
+        <PersonIcon />
+      </StyledButton>
+
+      <StyledButton onClick={() => handleSwitchPage("portfolio")} backgroundColor="#2b2a2a">
+        <ButtonText>PORTFOLIO</ButtonText>
+        <WorkIcon />
+      </StyledButton>
+
+      <StyledButton onClick={() => handleSwitchPage("contact")} backgroundColor="#2b2a2a">
+        <ButtonText>CONTACT</ButtonText>
+        <DraftsIcon />
       </StyledButton>
     </SidemenuContainer>
   );

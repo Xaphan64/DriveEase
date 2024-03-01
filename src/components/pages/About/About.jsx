@@ -24,7 +24,7 @@ const About = () => {
   // EVENT HANDLERS
   return (
     <AboutContainer>
-      <div>About page</div>
+      <div>about page</div>
     </AboutContainer>
   );
 };
