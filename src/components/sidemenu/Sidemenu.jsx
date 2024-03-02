@@ -29,22 +29,22 @@ const Sidemenu = ({ handleSwitchPage }) => {
   // EVENT HANDLERS
   return (
     <SidemenuContainer>
-      <StyledButton onClick={() => handleSwitchPage("home")} backgroundColor="#2b2a2a">
+      <StyledButton onClick={() => handleSwitchPage("home")} backgroundColor="#2b2a2a" width="175px">
         <ButtonText>HOME</ButtonText>
         <HomeIcon />
       </StyledButton>
 
-      <StyledButton onClick={() => handleSwitchPage("about")} backgroundColor="#2b2a2a">
+      <StyledButton onClick={() => handleSwitchPage("about")} backgroundColor="#2b2a2a" width="175px">
         <ButtonText>ABOUT</ButtonText>
         <PersonIcon />
       </StyledButton>
 
-      <StyledButton onClick={() => handleSwitchPage("portfolio")} backgroundColor="#2b2a2a">
+      <StyledButton onClick={() => handleSwitchPage("portfolio")} backgroundColor="#2b2a2a" width="175px">
         <ButtonText>PORTFOLIO</ButtonText>
         <WorkIcon />
       </StyledButton>
 
-      <StyledButton onClick={() => handleSwitchPage("contact")} backgroundColor="#2b2a2a">
+      <StyledButton onClick={() => handleSwitchPage("contact")} backgroundColor="#2b2a2a" width="175px">
         <ButtonText>CONTACT</ButtonText>
         <DraftsIcon />
       </StyledButton>

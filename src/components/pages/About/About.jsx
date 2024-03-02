@@ -1,6 +1,7 @@
 // ASSETS
 
 // STYLES
+import { TitleBack, TitleContainer, TitleFront } from "../../../App.styles";
 import { AboutContainer } from "./About.style";
 
 // LIBRARIES
@@ -24,7 +25,11 @@ const About = () => {
   // EVENT HANDLERS
   return (
     <AboutContainer>
-      <div>about page</div>
+      <TitleContainer>
+        <TitleBack>RESUME</TitleBack>
+        <TitleFront color="#ffffff">ABOUT</TitleFront>
+        <TitleFront color="#ffb400">ME</TitleFront>
+      </TitleContainer>
     </AboutContainer>
   );
 };
