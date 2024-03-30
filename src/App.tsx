@@ -1,7 +1,6 @@
 // ASSETS
 
 // STYLES
-import { ContactContainer } from "./Contact.style";
 
 // LIBRARIES
 
@@ -10,7 +9,7 @@ import { ContactContainer } from "./Contact.style";
 // COMPONENTS
 
 // CONFIGURATION
-const Contact = () => {
+const App = () => {
   // PROPERTIES
 
   // API REQUESTS
@@ -23,10 +22,10 @@ const Contact = () => {
 
   // EVENT HANDLERS
   return (
-    <ContactContainer>
-      <div>contact page</div>
-    </ContactContainer>
+    <div>
+      <h1>typescript test</h1>
+    </div>
   );
 };
 
-export default Contact;
+export default App;
