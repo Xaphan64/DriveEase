@@ -1,5 +1,6 @@
 // ASSETS
 import car from "../../assets/car.png";
+import MenuIcon from "@mui/icons-material/Menu";
 
 // STYLES
 import { NavButton, OrangeButton } from "../../atoms/Button/Button.style";
@@ -7,6 +8,7 @@ import { StyledContainer } from "../Layout/Layout.style";
 import { StyledButtonContainer, StyledLogo, StyledLogoText } from "./Header.style";
 
 // LIBRARIES
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // MISC
@@ -17,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 export interface HeaderProps {
   $padding?: string;
   $alignItems?: string;
+  height?: string;
 }
 
 const Header = () => {
@@ -26,9 +29,12 @@ const Header = () => {
 
   // LIBRARY CONSTANTS
   const navigate = useNavigate();
+  const isMobile = window.matchMedia("(max-width: 992px)")?.matches;
 
   // STATE CONSTANTS
+  const [showNavbar, setShowNavbar] = useState(false);
 
+  console.log(showNavbar);
   // LIFE CYCLE
 
   // EVENT HANDLERS
@@ -77,6 +83,10 @@ const Header = () => {
         <OrangeButton type="button" onClick={() => navigate("/register")}>
           register
         </OrangeButton>
+
+        <NavButton type="button" onClick={() => setShowNavbar((prev) => !prev)}>
+          <MenuIcon />
+        </NavButton>
       </StyledButtonContainer>
     </StyledContainer>
   );

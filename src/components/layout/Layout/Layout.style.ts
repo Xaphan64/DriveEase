@@ -6,14 +6,8 @@ export const StyledLayout = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: center;
-`;
 
-export const StyledOutlet = styled.div`
-  display: flex;
-  width: 70%;
-  height: 60vh;
-
-  border: 1px solid red;
+  /* border: 1px solid blue; */
 `;
 
 export const StyledContainer = styled.div<HeaderProps>`
@@ -22,5 +16,12 @@ export const StyledContainer = styled.div<HeaderProps>`
   align-items: ${(props) => props.$alignItems};
   justify-content: space-between;
   padding: ${(props) => props.$padding};
-  width: 70%;
+  height: ${(props) => props.height};
+  width: 1350px;
+
+  border: 1px solid red;
+
+  @media screen and (max-width: 1350px) {
+    width: 100%;
+  }
 `;

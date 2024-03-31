@@ -4,8 +4,11 @@ import EmailIcon from "@mui/icons-material/Email";
 
 // STYLES
 import { StyledContainer } from "../Layout/Layout.style";
-import { StyledFooterContact, StyledFooterItem, StyledFooterText, StyledFooterTitle } from "./Footer.style";
+import { StyledFooterContact, StyledFooterForm, StyledFooterItem } from "./Footer.style";
+import { StyledFooterText, StyledFooterTitle } from "./Footer.style";
 import { OrangeButton } from "../../atoms/Button/Button.style";
+import { StyledInput } from "../../atoms/Input/Input.style";
+import { useForm } from "../../hooks/useForm";
 
 // LIBRARIES
 
@@ -29,6 +32,9 @@ const Footer = () => {
   // LIBRARY CONSTANTS
 
   // STATE CONSTANTS
+  const { inputValues, handleInputChange, resetForm } = useForm({
+    subscription: "",
+  });
 
   // LIFE CYCLE
 
@@ -36,11 +42,13 @@ const Footer = () => {
   const handleSubscription = (event: React.FormEvent) => {
     event.preventDefault();
 
-    console.log("subscribed");
+    console.log("The", inputValues.subscription, "was subscribed to the newsletter");
+
+    resetForm();
   };
 
   return (
-    <StyledContainer $padding="80px 0" $alignItems="flex-start">
+    <StyledContainer $padding="80px 24px" $alignItems="flex-start">
       <StyledFooterItem>
         <StyledFooterTitle>
           EASE
@@ -65,6 +73,14 @@ const Footer = () => {
       </StyledFooterItem>
 
       <StyledFooterItem>
+        <StyledFooterTitle $textTransform="uppercase">about project</StyledFooterTitle>
+
+        <StyledFooterText color="#9e9689">
+          This project was made by Alexandru-Daniel Sarbu in React using Typescript and Styled Components
+        </StyledFooterText>
+      </StyledFooterItem>
+
+      <StyledFooterItem>
         <StyledFooterTitle $textTransform="uppercase">working hours</StyledFooterTitle>
 
         <StyledFooterText>Mon - Fri: 8:00 - 20:00</StyledFooterText>
@@ -79,11 +95,20 @@ const Footer = () => {
 
         <StyledFooterText>Subscribe your Email address for latest news & updates.</StyledFooterText>
 
-        <input />
+        <StyledFooterForm>
+          <StyledInput
+            type="email"
+            name="subscription"
+            value={inputValues.subscription}
+            placeholder="enter email address"
+            onChange={handleInputChange}
+            required
+          />
 
-        <OrangeButton type="submit" onClick={handleSubscription}>
-          submit
-        </OrangeButton>
+          <OrangeButton type="submit" onClick={handleSubscription}>
+            subscribe
+          </OrangeButton>
+        </StyledFooterForm>
       </StyledFooterItem>
     </StyledContainer>
   );

@@ -1,16 +1,16 @@
 // ASSETS
 
 // STYLES
-import { Outlet } from "react-router-dom";
-import { StyledLayout, StyledOutlet } from "./Layout.style";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import { StyledContainer, StyledLayout } from "./Layout.style";
 
 // LIBRARIES
+import { Outlet } from "react-router-dom";
 
 // MISC
 
 // COMPONENTS
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 // CONFIGURATION
 const Layout = () => {
@@ -29,9 +29,9 @@ const Layout = () => {
     <StyledLayout>
       <Header />
 
-      <StyledOutlet>
+      <StyledContainer height="90vh">
         <Outlet />
-      </StyledOutlet>
+      </StyledContainer>
 
       <Footer />
     </StyledLayout>

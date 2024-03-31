@@ -35,3 +35,9 @@ export const StyledFooterContact = styled.div`
   gap: 8px;
   align-items: center;
 `;
+
+export const StyledFooterForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
