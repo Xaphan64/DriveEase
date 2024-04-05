@@ -29,7 +29,7 @@ const Header = () => {
 
   // LIBRARY CONSTANTS
   const navigate = useNavigate();
-  const isMobile = window.matchMedia("(max-width: 992px)")?.matches;
+  // const isMobile = window.matchMedia("(max-width: 992px)")?.matches;
 
   // STATE CONSTANTS
   const [showNavbar, setShowNavbar] = useState(false);
@@ -76,17 +76,19 @@ const Header = () => {
       </StyledButtonContainer>
 
       <StyledButtonContainer>
-        <NavButton type="button" onClick={() => navigate("/login")}>
-          login
-        </NavButton>
+        <>
+          <NavButton type="button" onClick={() => navigate("/login")}>
+            login
+          </NavButton>
 
-        <OrangeButton type="button" onClick={() => navigate("/register")}>
-          register
-        </OrangeButton>
+          <OrangeButton type="button" onClick={() => navigate("/register")}>
+            register
+          </OrangeButton>
+        </>
 
-        <NavButton type="button" onClick={() => setShowNavbar((prev) => !prev)}>
+        {/* <NavButton type="button" onClick={() => setShowNavbar((prev) => !prev)}>
           <MenuIcon />
-        </NavButton>
+        </NavButton> */}
       </StyledButtonContainer>
     </StyledContainer>
   );

@@ -4,7 +4,7 @@ import EmailIcon from "@mui/icons-material/Email";
 
 // STYLES
 import { StyledContainer } from "../Layout/Layout.style";
-import { StyledFooterContact, StyledFooterForm, StyledFooterItem } from "./Footer.style";
+import { StyledFooterContact, StyledFooterContainer, StyledFooterForm, StyledFooterItem } from "./Footer.style";
 import { StyledFooterText, StyledFooterTitle } from "./Footer.style";
 import { OrangeButton } from "../../atoms/Button/Button.style";
 import { StyledInput } from "../../atoms/Input/Input.style";
@@ -22,6 +22,7 @@ export interface FooterProps {
   fontWeight?: string;
   $textTransform?: string;
   color?: string;
+  width?: string;
 }
 
 const Footer = () => {
@@ -48,14 +49,14 @@ const Footer = () => {
   };
 
   return (
-    <StyledContainer $padding="80px 24px" $alignItems="flex-start">
+    <StyledFooterContainer>
       <StyledFooterItem>
         <StyledFooterTitle>
           EASE
           <span>Drive</span>
         </StyledFooterTitle>
 
-        <StyledFooterText color="#9e9689">
+        <StyledFooterText color="#9e9689" width="300px">
           We offer a big range of vehicles for all your driving necesities. We have the perfect car to meet your needs.
         </StyledFooterText>
 
@@ -75,7 +76,7 @@ const Footer = () => {
       <StyledFooterItem>
         <StyledFooterTitle $textTransform="uppercase">about project</StyledFooterTitle>
 
-        <StyledFooterText color="#9e9689">
+        <StyledFooterText color="#9e9689" width="300px">
           This project was made by Alexandru-Daniel Sarbu in React using Typescript and Styled Components
         </StyledFooterText>
       </StyledFooterItem>
@@ -83,17 +84,17 @@ const Footer = () => {
       <StyledFooterItem>
         <StyledFooterTitle $textTransform="uppercase">working hours</StyledFooterTitle>
 
-        <StyledFooterText>Mon - Fri: 8:00 - 20:00</StyledFooterText>
+        <StyledFooterText width="216px">Mon - Fri: 8:00 - 20:00</StyledFooterText>
 
-        <StyledFooterText>Sat: 9:00 - 17:00</StyledFooterText>
+        <StyledFooterText width="216px">Sat: 9:00 - 17:00</StyledFooterText>
 
-        <StyledFooterText>Sun: Closed</StyledFooterText>
+        <StyledFooterText width="216px">Sun: Closed</StyledFooterText>
       </StyledFooterItem>
 
       <StyledFooterItem>
         <StyledFooterTitle $textTransform="uppercase">subscription</StyledFooterTitle>
 
-        <StyledFooterText>Subscribe your Email address for latest news & updates.</StyledFooterText>
+        <StyledFooterText width="300px">Subscribe your Email address for latest news & updates.</StyledFooterText>
 
         <StyledFooterForm>
           <StyledInput
@@ -110,7 +111,7 @@ const Footer = () => {
           </OrangeButton>
         </StyledFooterForm>
       </StyledFooterItem>
-    </StyledContainer>
+    </StyledFooterContainer>
   );
 };
 
