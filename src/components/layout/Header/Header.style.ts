@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledLogo = styled.div`
   display: flex;
@@ -26,7 +26,47 @@ export const StyledLogoText = styled.div`
     color: #f2613f;
   }
 `;
+
 export const StyledButtonContainer = styled.div`
   display: flex;
   gap: 16px;
+  transition: width 0.2s;
 `;
+
+type Props = {
+  showNavbar: boolean;
+};
+
+export const StyledMobileButtonContainer = styled.div<Props>(
+  (props) => css`
+    transition: width 0.2s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    gap: 5%;
+    opacity: 0;
+    visibility: hidden;
+
+    ${props.showNavbar &&
+    css`
+      position: absolute;
+      background-color: #2b2a2a;
+      width: 100vw;
+      height: 100vh;
+      transition: width 0.2s;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5%;
+      justify-content: center;
+      visibility: visible;
+      opacity: 1;
+    `}
+  `
+);

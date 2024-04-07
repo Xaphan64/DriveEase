@@ -9,8 +9,6 @@ export const StyledFooterContainer = styled.div`
   padding: 80px 24px;
   width: 1350px;
 
-  border: 1px solid red;
-
   @media screen and (max-width: 1350px) {
     width: 100%;
   }
@@ -64,7 +62,6 @@ export const StyledFooterText = styled.span<FooterProps>`
 
   @media screen and (max-width: 1200px) {
     width: 300px;
-    /* padding: 0 16px; */
   }
 `;
 

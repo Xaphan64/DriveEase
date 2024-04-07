@@ -1,15 +1,16 @@
 // ASSETS
 import car from "../../assets/car.png";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 // STYLES
-import { NavButton, OrangeButton } from "../../atoms/Button/Button.style";
+import { OrangeMobileButton, NavButton, MobileButton, Button } from "../../atoms/Button/Button.style";
 import { StyledContainer } from "../Layout/Layout.style";
-import { StyledButtonContainer, StyledLogo, StyledLogoText } from "./Header.style";
+import { StyledButtonContainer, StyledLogo, StyledLogoText, StyledMobileButtonContainer } from "./Header.style";
 
 // LIBRARIES
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // MISC
 
@@ -29,13 +30,17 @@ const Header = () => {
 
   // LIBRARY CONSTANTS
   const navigate = useNavigate();
-  // const isMobile = window.matchMedia("(max-width: 992px)")?.matches;
+  const location = useLocation();
+  const isMobile = window.matchMedia("(max-width: 992px)")?.matches;
 
   // STATE CONSTANTS
   const [showNavbar, setShowNavbar] = useState(false);
 
   console.log(showNavbar);
   // LIFE CYCLE
+  useEffect(() => {
+    setShowNavbar(false);
+  }, [location]);
 
   // EVENT HANDLERS
   return (
@@ -75,20 +80,50 @@ const Header = () => {
         </NavButton>
       </StyledButtonContainer>
 
+      <StyledMobileButtonContainer showNavbar={showNavbar}>
+        <Button type="button" onClick={() => navigate("/")}>
+          home
+        </Button>
+
+        <Button type="button" onClick={() => navigate("/about")}>
+          about
+        </Button>
+
+        <Button type="button" onClick={() => navigate("/models")}>
+          vehicle models
+        </Button>
+
+        <Button type="button" onClick={() => navigate("/testimonials")}>
+          testimonials
+        </Button>
+
+        <Button type="button" onClick={() => navigate("/team")}>
+          our team
+        </Button>
+
+        <Button type="button" onClick={() => navigate("/contact")}>
+          contact
+        </Button>
+      </StyledMobileButtonContainer>
+
       <StyledButtonContainer>
-        <>
-          <NavButton type="button" onClick={() => navigate("/login")}>
-            login
-          </NavButton>
+        <NavButton type="button" onClick={() => navigate("/login")}>
+          login
+        </NavButton>
 
-          <OrangeButton type="button" onClick={() => navigate("/register")}>
-            register
-          </OrangeButton>
-        </>
+        <OrangeMobileButton type="button" onClick={() => navigate("/register")}>
+          register
+        </OrangeMobileButton>
 
-        {/* <NavButton type="button" onClick={() => setShowNavbar((prev) => !prev)}>
-          <MenuIcon />
-        </NavButton> */}
+        {showNavbar ? (
+          <MobileButton type="button" onClick={() => setShowNavbar((prev) => !prev)}>
+            <CloseIcon />
+          </MobileButton>
+        ) : (
+          <MobileButton type="button" onClick={() => setShowNavbar((prev) => !prev)}>
+            <MenuIcon />
+          </MobileButton>
+        )}
       </StyledButtonContainer>
     </StyledContainer>
   );
