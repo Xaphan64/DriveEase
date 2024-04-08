@@ -22,10 +22,24 @@ export const OrangeButton = styled(Button)`
   background-color: #f2613f;
   padding: 16px 24px;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
   &:hover {
     background-color: #fa4226;
     color: #ffffff;
+  }
+`;
+
+export const BlackButton = styled(OrangeButton)`
+  background-color: #ffffff;
+  color: #0c0c0c;
+  border: 1px solid #ffffff;
+
+  &:hover {
+    background-color: #0c0c0c;
+    border: 1px solid #ffffff;
   }
 `;
 

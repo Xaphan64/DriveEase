@@ -6,8 +6,6 @@ export const StyledLayout = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: center;
-
-  /* border: 1px solid blue; */
 `;
 
 export const StyledContainer = styled.div<HeaderProps>`
@@ -18,8 +16,6 @@ export const StyledContainer = styled.div<HeaderProps>`
   padding: ${(props) => props.$padding};
   height: ${(props) => props.height};
   width: 1350px;
-
-  border: 1px solid red;
 
   @media screen and (max-width: 1350px) {
     width: 100%;

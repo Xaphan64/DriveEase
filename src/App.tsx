@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // COMPONENTS
 import Layout from "./components/layout/Layout/Layout";
+import Homepage from "./components/pages/Homepage/Homepage";
 
 // CONFIGURATION
 const App = () => {
@@ -32,7 +33,7 @@ const App = () => {
         <Route path="/register" element={<h1>register page</h1>} />
 
         <Route element={<Layout />}>
-          <Route path="/" element={<h1>homepage</h1>} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<h1>about</h1>} />
           <Route path="/models" element={<h1>vehicle models</h1>} />
           <Route path="/testimonials" element={<h1>testimonials</h1>} />

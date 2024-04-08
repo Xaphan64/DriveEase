@@ -29,7 +29,7 @@ const Layout = () => {
     <StyledLayout>
       <Header />
 
-      <StyledContainer height="90vh">
+      <StyledContainer>
         <Outlet />
       </StyledContainer>
 

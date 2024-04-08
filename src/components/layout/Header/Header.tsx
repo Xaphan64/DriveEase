@@ -31,7 +31,6 @@ const Header = () => {
   // LIBRARY CONSTANTS
   const navigate = useNavigate();
   const location = useLocation();
-  const isMobile = window.matchMedia("(max-width: 992px)")?.matches;
 
   // STATE CONSTANTS
   const [showNavbar, setShowNavbar] = useState(false);
