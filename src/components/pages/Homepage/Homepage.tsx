@@ -44,7 +44,7 @@ const Homepage = () => {
     <StyledPageContainer>
       {/* <BackgroundImage /> */}
 
-      {/* <div style={cityStyles} /> */}
+      <div style={cityStyles} />
 
       <StyledPageCategory>
         <StyledPageCategory $flexDirection="column" $gap="32px" $width="40%">
@@ -54,9 +54,9 @@ const Homepage = () => {
 
           <StyledText $fontSize="60px" $fontWeight="bold">
             Save
-            {/* <StyledText $fontSize="60px" $fontWeight="bold" $color="#f2613f">
+            <StyledText $fontSize="60px" $fontWeight="bold" $color="#f2613f">
               big
-            </StyledText> */}
+            </StyledText>
             <p>big</p>
             with our car rental
           </StyledText>
