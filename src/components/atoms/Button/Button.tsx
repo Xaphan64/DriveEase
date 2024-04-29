@@ -9,13 +9,13 @@
 // COMPONENTS
 
 // CONFIGURATION
-interface ButtonProps {
+type ButtonProps = {
   type: "button" | "submit" | "reset";
   name?: string;
   onClick: (event: React.MouseEvent) => void;
   children?: React.ReactNode;
   className?: string;
-}
+};
 
 const CustomButton = (props: ButtonProps) => {
   // PROPERTIES

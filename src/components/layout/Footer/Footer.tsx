@@ -3,7 +3,6 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 
 // STYLES
-import { StyledContainer } from "../Layout/Layout.style";
 import { StyledFooterContact, StyledFooterContainer, StyledFooterForm, StyledFooterItem } from "./Footer.style";
 import { StyledFooterText, StyledFooterTitle } from "./Footer.style";
 import { OrangeButton } from "../../atoms/Button/Button.style";
@@ -17,13 +16,6 @@ import { useForm } from "../../hooks/useForm";
 // COMPONENTS
 
 // CONFIGURATION
-export interface FooterProps {
-  fontSize?: string;
-  fontWeight?: string;
-  $textTransform?: string;
-  color?: string;
-  width?: string;
-}
 
 const Footer = () => {
   // PROPERTIES

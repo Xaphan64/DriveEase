@@ -4,11 +4,12 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 // STYLES
-import { BackgroundImage, StyledPageCategory, StyledPageContainer, StyledText } from "./Homepage.style";
+import { BackgroundImage, StyledPageCategory, StyledPageContainer, StyledText, StyledTitle } from "./Homepage.style";
 import { BlackButton, OrangeButton } from "../../atoms/Button/Button.style";
 
 // LIBRARIES
 import { useNavigate } from "react-router-dom";
+import HeaderCard from "../../cards/HeaderCard/HeaderCard";
 
 // MISC
 
@@ -24,7 +25,7 @@ const cityStyles: React.CSSProperties = {
   top: "0",
   zIndex: "-1",
   backgroundSize: "cover",
-  backgroundPosition: "center",
+  // backgroundPosition: "center",
 };
 
 const Homepage = () => {
@@ -46,20 +47,28 @@ const Homepage = () => {
 
       <div style={cityStyles} />
 
+      {/* <HeaderCard /> */}
+
       <StyledPageCategory>
         <StyledPageCategory $flexDirection="column" $gap="32px" $width="40%">
           <StyledText $fontSize="24px" $fontWeight="bold">
             Plan your trip now
           </StyledText>
 
-          <StyledText $fontSize="60px" $fontWeight="bold">
+          {/* <StyledText $fontSize="60px" $fontWeight="bold">
             Save
             <StyledText $fontSize="60px" $fontWeight="bold" $color="#f2613f">
               big
             </StyledText>
-            <p>big</p>
             with our car rental
-          </StyledText>
+          </StyledText> */}
+
+          <StyledTitle>
+            <span>
+              Save <p>big</p> with our
+            </span>
+            <span>car rental</span>
+          </StyledTitle>
 
           <StyledText $fontSize="16px" $color="gray">
             Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.

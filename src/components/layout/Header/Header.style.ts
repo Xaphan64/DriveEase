@@ -39,7 +39,7 @@ type Props = {
 
 export const StyledMobileButtonContainer = styled.div<Props>(
   (props) => css`
-    transition: width 0.2s;
+    transition: 0.3s;
     position: absolute;
     left: 0;
     top: 0;
@@ -51,14 +51,15 @@ export const StyledMobileButtonContainer = styled.div<Props>(
     gap: 5%;
     opacity: 0;
     visibility: hidden;
+    z-index: 10;
 
     ${props.showNavbar &&
     css`
-      position: absolute;
+      position: fixed;
       background-color: #2b2a2a;
       width: 100vw;
       height: 100vh;
-      transition: width 0.2s;
+      transition: 0.3s;
       left: 0;
       top: 0;
       display: flex;

@@ -17,11 +17,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 // COMPONENTS
 
 // CONFIGURATION
-export interface HeaderProps {
+export type HeaderProps = {
   $padding?: string;
   $alignItems?: string;
   height?: string;
-}
+};
 
 const Header = () => {
   // PROPERTIES
@@ -35,7 +35,6 @@ const Header = () => {
   // STATE CONSTANTS
   const [showNavbar, setShowNavbar] = useState(false);
 
-  console.log(showNavbar);
   // LIFE CYCLE
   useEffect(() => {
     setShowNavbar(false);

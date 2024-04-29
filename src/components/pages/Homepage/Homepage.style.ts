@@ -60,3 +60,19 @@ export const StyledText = styled.span<TextProps>`
     color: #f2613f;
   }
 `;
+
+export const StyledTitle = styled.h1`
+  display: flex;
+  flex-direction: column;
+
+  span {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    /* white-space: nowrap; */
+
+    p {
+      color: #f2613f;
+    }
+  }
+`;

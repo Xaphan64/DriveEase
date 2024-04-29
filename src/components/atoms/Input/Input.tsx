@@ -9,7 +9,7 @@
 // COMPONENTS
 
 // CONFIGURATION
-interface InputProps {
+type InputProps = {
   type: string;
   name: string;
   placeholder: string;
@@ -18,7 +18,7 @@ interface InputProps {
   value?: string;
   className?: string;
   required?: boolean;
-}
+};
 
 const CustomInput = (props: InputProps) => {
   // PROPERTIES

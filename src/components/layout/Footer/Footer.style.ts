@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FooterProps } from "./Footer";
 
 export const StyledFooterContainer = styled.div`
   display: flex;
@@ -78,3 +77,11 @@ export const StyledFooterForm = styled.form`
   flex-direction: column;
   gap: 16px;
 `;
+
+type FooterProps = {
+  fontSize?: string;
+  fontWeight?: string;
+  $textTransform?: string;
+  color?: string;
+  width?: string;
+};
