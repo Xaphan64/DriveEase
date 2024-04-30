@@ -29,30 +29,30 @@ export const BackgroundImage = styled.img`
 `;
 
 type PageCategoryProps = {
-  $flexDirection?: "column" | "row";
-  $width?: string;
-  $gap?: string;
+  flexDirection?: "column" | "row";
+  width?: string;
+  gap?: string;
 };
 
 export const StyledPageCategory = styled.div<PageCategoryProps>`
   display: flex;
-  flex-direction: ${(props) => props.$flexDirection};
-  width: ${(props) => props.$width};
-  gap: ${(props) => props.$gap};
+  flex-direction: ${(props) => props.flexDirection};
+  width: ${(props) => props.width};
+  gap: ${(props) => props.gap};
 
   /* border: 1px solid red; */
 `;
 
 type TextProps = {
-  $fontSize: string;
-  $color?: string;
-  $fontWeight?: string;
+  fontSize: string;
+  color?: string;
+  fontWeight?: string;
 };
 
 export const StyledText = styled.span<TextProps>`
-  font-size: ${(props) => props.$fontSize};
-  color: ${(props) => props.$color};
-  font-weight: ${(props) => props.$fontWeight};
+  font-size: ${(props) => props.fontSize};
+  color: ${(props) => props.color};
+  font-weight: ${(props) => props.fontWeight};
   display: flex;
   gap: 16px;
 

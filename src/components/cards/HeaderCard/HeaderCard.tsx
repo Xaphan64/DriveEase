@@ -1,7 +1,12 @@
 // ASSETS
 
 // STYLES
-import { StyledHeaderCardContainer, StyledHeaderImage, StyledHeaderText } from "./HeaderCard.style";
+import {
+  HeaderCardContainer,
+  StyledHeaderCardContainer,
+  StyledHeaderImage,
+  StyledHeaderText,
+} from "./HeaderCard.style";
 
 // LIBRARIES
 import { useEffect, useState } from "react";
@@ -40,13 +45,15 @@ const HeaderCard = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledHeaderCardContainer>
-      <StyledHeaderImage />
-      <StyledHeaderText $fontSize="32px" $fontWeight="bold">
-        {pageTitle}
-      </StyledHeaderText>
-      <StyledHeaderText $fontSize="16px">Home / {pageTitle}</StyledHeaderText>
-    </StyledHeaderCardContainer>
+    <HeaderCardContainer>
+      <StyledHeaderCardContainer>
+        <StyledHeaderImage />
+        <StyledHeaderText fontSize="32px" fontWeight="bold">
+          {pageTitle}
+        </StyledHeaderText>
+        <StyledHeaderText fontSize="16px">Home / {pageTitle}</StyledHeaderText>
+      </StyledHeaderCardContainer>
+    </HeaderCardContainer>
   );
 };
 

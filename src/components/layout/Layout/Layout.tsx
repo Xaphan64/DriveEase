@@ -1,7 +1,7 @@
 // ASSETS
 
 // STYLES
-import { StyledContainer, StyledLayout } from "./Layout.style";
+import { StyledContainer, StyledLayout, WorkInProgress } from "./Layout.style";
 
 // LIBRARIES
 import { Outlet } from "react-router-dom";
@@ -30,6 +30,8 @@ const Layout = () => {
       <Header />
 
       <StyledContainer>
+        {/* <WorkInProgress>Please note that this is a work in progress project!</WorkInProgress> */}
+
         <Outlet />
       </StyledContainer>
 

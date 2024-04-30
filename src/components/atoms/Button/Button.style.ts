@@ -18,13 +18,15 @@ export const Button = styled(CustomButton)`
   }
 `;
 
-export const OrangeButton = styled(Button)`
+export const OrangeButton = styled(Button)<ButtonProps>`
   background-color: #f2613f;
   padding: 16px 24px;
   border-radius: 4px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  width: ${(props) => props.width};
 
   &:hover {
     background-color: #fa4226;
@@ -68,3 +70,7 @@ export const MobileButton = styled(Button)`
     display: none;
   }
 `;
+
+type ButtonProps = {
+  width?: string;
+};

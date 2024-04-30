@@ -9,7 +9,6 @@ import { BlackButton, OrangeButton } from "../../atoms/Button/Button.style";
 
 // LIBRARIES
 import { useNavigate } from "react-router-dom";
-import HeaderCard from "../../cards/HeaderCard/HeaderCard";
 
 // MISC
 
@@ -34,7 +33,7 @@ const Homepage = () => {
   // API REQUESTS
 
   // LIBRARY CONSTANTS
-  const nagivate = useNavigate();
+  const navigate = useNavigate();
 
   // STATE CONSTANTS
 
@@ -47,11 +46,9 @@ const Homepage = () => {
 
       <div style={cityStyles} />
 
-      {/* <HeaderCard /> */}
-
       <StyledPageCategory>
-        <StyledPageCategory $flexDirection="column" $gap="32px" $width="40%">
-          <StyledText $fontSize="24px" $fontWeight="bold">
+        <StyledPageCategory flexDirection="column" gap="32px" width="40%">
+          <StyledText fontSize="24px" fontWeight="bold">
             Plan your trip now
           </StyledText>
 
@@ -70,16 +67,16 @@ const Homepage = () => {
             <span>car rental</span>
           </StyledTitle>
 
-          <StyledText $fontSize="16px" $color="gray">
+          <StyledText fontSize="16px" color="gray">
             Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.
           </StyledText>
 
-          <StyledPageCategory $flexDirection="row" $gap="32px">
-            <OrangeButton type="button" onClick={() => nagivate("/")}>
+          <StyledPageCategory flexDirection="row" gap="32px">
+            <OrangeButton type="button" onClick={() => navigate("/")}>
               Book Ride <CheckCircleOutlineIcon />
             </OrangeButton>
 
-            <BlackButton type="button" onClick={() => nagivate("/about")}>
+            <BlackButton type="button" onClick={() => navigate("/about")}>
               Learn More <NavigateNextIcon />
             </BlackButton>
           </StyledPageCategory>

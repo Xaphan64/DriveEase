@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import carBack from "../../assets/carBack.jpg";
 
+export const HeaderCardContainer = styled.div`
+  display: flex;
+  align-self: flex-start;
+`;
+
 export const StyledHeaderCardContainer = styled.div`
   position: static;
   padding-bottom: 240px;
@@ -24,11 +29,11 @@ export const StyledHeaderImage = styled.div`
 
 export const StyledHeaderText = styled.span<HeaderText>`
   padding-left: 32px;
-  font-size: ${(props) => props.$fontSize};
-  font-weight: ${(props) => props.$fontWeight};
+  font-size: ${(props) => props.fontSize};
+  font-weight: ${(props) => props.fontWeight};
 `;
 
 type HeaderText = {
-  $fontSize?: string;
-  $fontWeight?: string;
+  fontSize?: string;
+  fontWeight?: string;
 };

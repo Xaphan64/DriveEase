@@ -18,8 +18,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 // CONFIGURATION
 export type HeaderProps = {
-  $padding?: string;
-  $alignItems?: string;
+  padding?: string;
+  alignItems?: string;
   height?: string;
 };
 
@@ -42,7 +42,7 @@ const Header = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledContainer $padding="40px 32px" $alignItems="center">
+    <StyledContainer padding="40px 32px" alignItems="center">
       <StyledLogo onClick={() => navigate("/")}>
         <img src={car} alt="car" />
 

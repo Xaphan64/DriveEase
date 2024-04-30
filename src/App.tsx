@@ -12,6 +12,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout/Layout";
 import Homepage from "./components/pages/Homepage/Homepage";
 import About from "./components/pages/About/About";
+import VehicleModels from "./components/pages/VehicleModels/VehicleModels";
 
 // CONFIGURATION
 const App = () => {
@@ -36,7 +37,7 @@ const App = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/models" element={<h1>vehicle models</h1>} />
+          <Route path="/models" element={<VehicleModels />} />
           <Route path="/testimonials" element={<h1>testimonials</h1>} />
           <Route path="/team" element={<h1>our team</h1>} />
           <Route path="/contact" element={<h1>contact</h1>} />
