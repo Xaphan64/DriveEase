@@ -44,10 +44,10 @@ const About = () => {
 
         <StyledTextContainer width="500px" mediaQuery="500px">
           <StyledText fontSize="32px">About Company</StyledText>
-          <StyledText fontSize="48px" fontWeight="bold" lineHeight="1">
+          <StyledText fontSize="48px" fontWeight="bold" $lineHeight="1">
             You start the engine and your adventure begins
           </StyledText>
-          <StyledText lineHeight="1.3" color="lightgray">
+          <StyledText $lineHeight="1.3" color="lightgray">
             We strive to provide seamless transportation solutions tailored to your needs. With a diverse fleet of
             vehicles ranging from compact cars to luxury SUVs, we ensure a comfortable and enjoyable journey for every
             customer. Our commitment to exceptional service, competitive pricing, and hassle-free booking makes us the
@@ -90,7 +90,7 @@ const About = () => {
         </StyledTextContainer>
       </StyledAbout>
 
-      <StyledAbout flexDirection="column" textAlign="center" gap="64px">
+      <StyledAbout $flexDirection="column" textAlign="center" gap="64px">
         <StyledTextContainer>
           <StyledText fontSize="32px">Plan your trip now</StyledText>
           <StyledText fontSize="48px" fontWeight="bold">
@@ -106,7 +106,7 @@ const About = () => {
             fontSize="32px"
             fontWeight="bold"
             color="lightgray"
-            flexDirection="column"
+            $flexDirection="column"
             whiteSpace="nowrap"
             width="300px"
             svgDimension="100px"
@@ -120,7 +120,7 @@ const About = () => {
             fontSize="32px"
             fontWeight="bold"
             color="lightgray"
-            flexDirection="column"
+            $flexDirection="column"
             whiteSpace="nowrap"
             width="300px"
             svgDimension="100px"
@@ -134,7 +134,7 @@ const About = () => {
             fontSize="32px"
             fontWeight="bold"
             color="lightgray"
-            flexDirection="column"
+            $flexDirection="column"
             whiteSpace="nowrap"
             width="300px"
             svgDimension="100px"

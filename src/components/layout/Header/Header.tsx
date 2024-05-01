@@ -19,7 +19,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 // CONFIGURATION
 export type HeaderProps = {
   padding?: string;
-  alignItems?: string;
+  alignitems?: string;
   height?: string;
 };
 
@@ -42,7 +42,7 @@ const Header = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledContainer padding="40px 32px" alignItems="center">
+    <StyledContainer padding="40px 32px" alignitems="center">
       <StyledLogo onClick={() => navigate("/")}>
         <img src={car} alt="car" />
 
@@ -109,7 +109,13 @@ const Header = () => {
           login
         </NavButton>
 
-        <OrangeMobileButton type="button" onClick={() => navigate("/register")}>
+        <OrangeMobileButton
+          type="button"
+          onClick={() => navigate("/register")}
+          backgroundColor="#f2613f"
+          hoverColor="#ffffff"
+          hoverBackgroundColor="#fa4226"
+        >
           register
         </OrangeMobileButton>
 

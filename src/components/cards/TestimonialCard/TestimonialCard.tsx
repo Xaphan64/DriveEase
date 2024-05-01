@@ -2,11 +2,8 @@
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 // STYLES
-import {
-  StyledTestimonialCardContainer,
-  StyledTestimonialContainer,
-  StyledTestimonialText,
-} from "./TestimonialCard.style";
+import { StyledTestimonialCardContainer } from "./TestimonialCard.style";
+import { StyledTestimonialContainer, StyledTestimonialText } from "./TestimonialCard.style";
 
 // LIBRARIES
 
@@ -38,13 +35,13 @@ const TestimonialCard = (props: TestimonialCardProps) => {
     <StyledTestimonialCardContainer>
       <StyledTestimonialText fontSize="20px">{props.text}</StyledTestimonialText>
 
-      <StyledTestimonialContainer justifyContent="space-between" alignItems="center">
-        <StyledTestimonialContainer alignItems="center" gap="8px">
+      <StyledTestimonialContainer justifyContent="space-between" alignitems="center">
+        <StyledTestimonialContainer alignitems="center" gap="8px">
           <StyledTestimonialContainer>
             <img src={props.image} alt="" />
           </StyledTestimonialContainer>
 
-          <StyledTestimonialContainer flexDirection="column">
+          <StyledTestimonialContainer $flexDirection="column">
             <StyledTestimonialText fontWeight="bold">{props.name}</StyledTestimonialText>
 
             <StyledTestimonialText>{props.location}</StyledTestimonialText>

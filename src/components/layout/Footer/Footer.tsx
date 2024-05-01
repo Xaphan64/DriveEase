@@ -5,7 +5,7 @@ import EmailIcon from "@mui/icons-material/Email";
 // STYLES
 import { StyledFooterContact, StyledFooterContainer, StyledFooterForm, StyledFooterItem } from "./Footer.style";
 import { StyledFooterText, StyledFooterTitle } from "./Footer.style";
-import { OrangeButton } from "../../atoms/Button/Button.style";
+import { StyledButton } from "../../atoms/Button/Button.style";
 import { StyledInput } from "../../atoms/Input/Input.style";
 import { useForm } from "../../hooks/useForm";
 
@@ -98,9 +98,15 @@ const Footer = () => {
             required
           />
 
-          <OrangeButton type="submit" onClick={handleSubscription}>
+          <StyledButton
+            type="submit"
+            onClick={handleSubscription}
+            backgroundColor="#f2613f"
+            hoverColor="#ffffff"
+            hoverBackgroundColor="#fa4226"
+          >
             subscribe
-          </OrangeButton>
+          </StyledButton>
         </StyledFooterForm>
       </StyledFooterItem>
     </StyledFooterContainer>

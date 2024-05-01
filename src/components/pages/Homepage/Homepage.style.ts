@@ -10,33 +10,15 @@ export const StyledPageContainer = styled.div`
   width: 100%;
 `;
 
-export const BackgroundImage = styled.img`
-  background-image: url(${city});
-  width: 800px;
-  height: 600px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  /* border-radius: 24px; */
-  /* background-color: gray; */
-  outline: none;
-  border: none;
-  z-index: -1;
-`;
-
 type PageCategoryProps = {
-  flexDirection?: "column" | "row";
+  $flexDirection?: "column" | "row";
   width?: string;
   gap?: string;
 };
 
 export const StyledPageCategory = styled.div<PageCategoryProps>`
   display: flex;
-  flex-direction: ${(props) => props.flexDirection};
+  flex-direction: ${(props) => props.$flexDirection};
   width: ${(props) => props.width};
   gap: ${(props) => props.gap};
 

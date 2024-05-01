@@ -12,7 +12,7 @@ export const StyledContainer = styled.div`
 export const StyledAbout = styled.div<AboutProps>`
   display: flex;
   gap: ${(props) => props.gap};
-  flex-direction: ${(props) => props.flexDirection};
+  flex-direction: ${(props) => props.$flexDirection};
   text-align: ${(props) => props.textAlign};
 
   @media screen and (max-width: 1050px) {
@@ -68,7 +68,7 @@ export const StyledText = styled.span<AboutProps>`
   color: ${(props) => props.color};
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};
-  line-height: ${(props) => props.lineHeight};
+  line-height: ${(props) => props.$lineHeight};
 
   @media screen and (max-width: 1050px) {
     text-align: center;
@@ -79,8 +79,8 @@ type AboutProps = {
   fontSize?: string;
   fontWeight?: string;
   color?: string;
-  lineHeight?: string;
-  flexDirection?: string;
+  $lineHeight?: string;
+  $flexDirection?: string;
   textAlign?: string;
   gap?: string;
   width?: string;

@@ -17,7 +17,7 @@ type AboutCardProps = {
   fontSize?: string;
   fontWeight?: "bold" | "normal" | "lighter";
   color?: string;
-  flexDirection?: "row" | "column";
+  $flexDirection?: "row" | "column";
   whiteSpace?: string;
   width?: string;
   svgDimension?: string;
@@ -40,7 +40,7 @@ const AboutCard = (props: AboutCardProps) => {
     <StyledAboutCard svgDimension={props.svgDimension} backgroundColor={props.backgroundColor}>
       {props.children}
 
-      <StyledAboutCardTextContainer flexDirection={props.flexDirection} width={props.width}>
+      <StyledAboutCardTextContainer $flexDirection={props.$flexDirection} width={props.width}>
         <StyledAboutCardText fontSize={props.fontSize} fontWeight={props.fontWeight} whiteSpace={props.whiteSpace}>
           {props.number}
         </StyledAboutCardText>

@@ -4,8 +4,8 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 // STYLES
-import { BackgroundImage, StyledPageCategory, StyledPageContainer, StyledText, StyledTitle } from "./Homepage.style";
-import { BlackButton, OrangeButton } from "../../atoms/Button/Button.style";
+import { StyledPageCategory, StyledPageContainer, StyledText, StyledTitle } from "./Homepage.style";
+import { Button, StyledButton } from "../../atoms/Button/Button.style";
 
 // LIBRARIES
 import { useNavigate } from "react-router-dom";
@@ -42,12 +42,10 @@ const Homepage = () => {
   // EVENT HANDLERS
   return (
     <StyledPageContainer>
-      {/* <BackgroundImage /> */}
-
       <div style={cityStyles} />
 
       <StyledPageCategory>
-        <StyledPageCategory flexDirection="column" gap="32px" width="40%">
+        <StyledPageCategory $flexDirection="column" gap="32px" width="40%">
           <StyledText fontSize="24px" fontWeight="bold">
             Plan your trip now
           </StyledText>
@@ -71,14 +69,29 @@ const Homepage = () => {
             Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.
           </StyledText>
 
-          <StyledPageCategory flexDirection="row" gap="32px">
-            <OrangeButton type="button" onClick={() => navigate("/")}>
+          <StyledPageCategory $flexDirection="row" gap="32px">
+            <StyledButton
+              type="button"
+              onClick={() => navigate("/")}
+              backgroundColor="#f2613f"
+              hoverColor="#ffffff"
+              hoverBackgroundColor="#fa4226"
+            >
               Book Ride <CheckCircleOutlineIcon />
-            </OrangeButton>
+            </StyledButton>
 
-            <BlackButton type="button" onClick={() => navigate("/about")}>
+            <StyledButton
+              type="button"
+              onClick={() => navigate("/about")}
+              backgroundColor="#ffffff"
+              hoverBackgroundColor="#0c0c0c"
+              color="#0c0c0c"
+              hoverColor="#ffffff"
+              hoverBorder="1px solid #ffffff"
+              border="1px solid #ffffff"
+            >
               Learn More <NavigateNextIcon />
-            </BlackButton>
+            </StyledButton>
           </StyledPageCategory>
         </StyledPageCategory>
 

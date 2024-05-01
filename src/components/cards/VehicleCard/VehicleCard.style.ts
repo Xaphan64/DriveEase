@@ -29,7 +29,7 @@ export const StyledVehicleImage = styled.div`
 
 export const StyledVehicleTextContainer = styled.div<VehicleCardProps>`
   display: flex;
-  flex-direction: ${(props) => props.flexDirection};
+  flex-direction: ${(props) => props.$flexDirection};
   justify-content: ${(props) => props.justifyContent};
   padding: ${(props) => props.padding};
   gap: ${(props) => props.gap};
@@ -51,7 +51,7 @@ export const ButtonContainer = styled.div`
 `;
 
 type VehicleCardProps = {
-  flexDirection?: "column" | "row";
+  $flexDirection?: "column" | "row";
   justifyContent?: "flex-start" | "center" | "flex-end" | "space-around" | "space-between" | "space-evenly";
   padding?: string;
   gap?: string;

@@ -31,7 +31,7 @@ export const TeamList = [
     id: 3,
     image: claudiuTeohari,
     name: "Claudiu Teohari",
-    position: "Car Detailist",
+    position: "Car Specialist",
   },
 
   {

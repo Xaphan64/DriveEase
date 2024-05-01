@@ -7,7 +7,7 @@ export const useForm = (initialState: Record<string, any> = {}) => {
     setInputValues(initialState);
   };
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = event.target;
 
     setInputValues({

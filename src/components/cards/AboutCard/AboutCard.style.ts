@@ -16,7 +16,7 @@ export const StyledAboutCard = styled.div<AboutCardProps>`
 
 export const StyledAboutCardTextContainer = styled.div<AboutCardProps>`
   display: flex;
-  flex-direction: ${(props) => props.flexDirection};
+  flex-direction: ${(props) => props.$flexDirection};
   align-items: center;
   gap: 8px;
   width: ${(props) => props.width};
@@ -30,7 +30,7 @@ export const StyledAboutCardText = styled.span<AboutCardProps>`
   text-align: center;
 `;
 type AboutCardProps = {
-  flexDirection?: string;
+  $flexDirection?: string;
   fontSize?: string;
   fontWeight?: string;
   color?: string;

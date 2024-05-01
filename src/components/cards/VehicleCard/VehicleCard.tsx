@@ -1,7 +1,7 @@
 // ASSETS
 
 // STYLES
-import { OrangeButton } from "../../atoms/Button/Button.style";
+import { StyledButton } from "../../atoms/Button/Button.style";
 import { ButtonContainer, StyledVehicleCardContainer, StyledVehicleImage } from "./VehicleCard.style";
 import { StyledVehicleText, StyledVehicleTextContainer } from "./VehicleCard.style";
 
@@ -44,12 +44,12 @@ const VehicleCard = (props: VehicleCardProps) => {
       </StyledVehicleImage>
 
       <StyledVehicleTextContainer
-        flexDirection="column"
+        $flexDirection="column"
         justifyContent="space-around"
         padding="16px 24px"
         height="100%"
       >
-        <StyledVehicleTextContainer flexDirection="column" gap="8px">
+        <StyledVehicleTextContainer $flexDirection="column" gap="8px">
           <StyledVehicleTextContainer justifyContent="space-between">
             <StyledVehicleText fontSize="32px" fontWeight="bold">
               {props.brand}
@@ -77,9 +77,16 @@ const VehicleCard = (props: VehicleCardProps) => {
       </StyledVehicleTextContainer>
 
       <ButtonContainer>
-        <OrangeButton width="316px" type="button" onClick={() => navigate("/")}>
+        <StyledButton
+          width="316px"
+          type="button"
+          onClick={() => navigate("/")}
+          backgroundColor="#f2613f"
+          hoverColor="#ffffff"
+          hoverBackgroundColor="#fa4226"
+        >
           book ride
-        </OrangeButton>
+        </StyledButton>
       </ButtonContainer>
     </StyledVehicleCardContainer>
   );
