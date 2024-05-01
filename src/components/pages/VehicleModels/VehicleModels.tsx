@@ -1,11 +1,8 @@
 // ASSETS
 
 // STYLES
-import ContactCard from "../../cards/ContactCard/ContactCard";
-import HeaderCard from "../../cards/HeaderCard/HeaderCard";
-import VehicleCard from "../../cards/VehicleCard/VehicleCard";
 import { StyledContainer } from "../About/About.style";
-import { StyledModelsCarContainer } from "./VehicleModels.style";
+import { StyledGridContainer } from "./VehicleModels.style";
 
 // LIBRARIES
 
@@ -13,6 +10,9 @@ import { StyledModelsCarContainer } from "./VehicleModels.style";
 import { VehicleList } from "../../cards/VehicleCard/VehicleList";
 
 // COMPONENTS
+import ContactCard from "../../cards/ContactCard/ContactCard";
+import HeaderCard from "../../cards/HeaderCard/HeaderCard";
+import VehicleCard from "../../cards/VehicleCard/VehicleCard";
 
 // CONFIGURATION
 const VehicleModels = () => {
@@ -31,7 +31,7 @@ const VehicleModels = () => {
     <StyledContainer>
       <HeaderCard />
 
-      <StyledModelsCarContainer>
+      <StyledGridContainer>
         {VehicleList.map((car, index) => (
           <VehicleCard
             key={index}
@@ -45,21 +45,7 @@ const VehicleModels = () => {
             fuel={car.fuel}
           />
         ))}
-
-        {/* <VehicleCard />
-        <VehicleCard />
-        <VehicleCard />
-        <VehicleCard />
-
-        <div>five</div>
-        <div>six</div>
-        <div>seven</div>
-        <div>eight</div>
-        <div>nine</div>
-        <div>ten</div>
-        <div>eleven</div>
-        <div>twelve</div> */}
-      </StyledModelsCarContainer>
+      </StyledGridContainer>
 
       <ContactCard />
     </StyledContainer>

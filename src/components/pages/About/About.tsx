@@ -9,7 +9,7 @@ import AirportShuttleIcon from "@mui/icons-material/AirportShuttle";
 
 // STYLES
 import { StyledAbout, StyledContainer, StyledAboutImage } from "./About.style";
-import { StyledAboutText, StyledAboutTextContainer, StyledCardContainer } from "./About.style";
+import { StyledText, StyledTextContainer, StyledCardContainer } from "./About.style";
 
 // LIBRARIES
 
@@ -42,18 +42,18 @@ const About = () => {
           <img src={aboutImage} alt="" />
         </StyledAboutImage>
 
-        <StyledAboutTextContainer width="500px">
-          <StyledAboutText fontSize="32px">About Company</StyledAboutText>
-          <StyledAboutText fontSize="48px" fontWeight="bold" lineHeight="1">
+        <StyledTextContainer width="500px" mediaQuery="500px">
+          <StyledText fontSize="32px">About Company</StyledText>
+          <StyledText fontSize="48px" fontWeight="bold" lineHeight="1">
             You start the engine and your adventure begins
-          </StyledAboutText>
-          <StyledAboutText lineHeight="1.3" color="lightgray">
+          </StyledText>
+          <StyledText lineHeight="1.3" color="lightgray">
             We strive to provide seamless transportation solutions tailored to your needs. With a diverse fleet of
             vehicles ranging from compact cars to luxury SUVs, we ensure a comfortable and enjoyable journey for every
             customer. Our commitment to exceptional service, competitive pricing, and hassle-free booking makes us the
             preferred choice for all your travel needs. Whether it's a weekend getaway, a business trip, or a family
             vacation, trust us to get you there safely and in style. Experience the difference with DriveEase.
-          </StyledAboutText>
+          </StyledText>
 
           <StyledCardContainer mediaQuery="500px">
             <AboutCard
@@ -87,16 +87,16 @@ const About = () => {
               svgDimension="60px"
             />
           </StyledCardContainer>
-        </StyledAboutTextContainer>
+        </StyledTextContainer>
       </StyledAbout>
 
       <StyledAbout flexDirection="column" textAlign="center" gap="64px">
-        <StyledAboutTextContainer>
-          <StyledAboutText fontSize="32px">Plan your trip now</StyledAboutText>
-          <StyledAboutText fontSize="48px" fontWeight="bold">
+        <StyledTextContainer>
+          <StyledText fontSize="32px">Plan your trip now</StyledText>
+          <StyledText fontSize="48px" fontWeight="bold">
             Quick & easy car rental
-          </StyledAboutText>
-        </StyledAboutTextContainer>
+          </StyledText>
+        </StyledTextContainer>
 
         <StyledCardContainer mediaQuery="900px">
           <AboutCard

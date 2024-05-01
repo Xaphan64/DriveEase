@@ -4,7 +4,7 @@ export const StyledContainer = styled.div`
   position: static;
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 32px;
   align-items: center;
   width: 100%;
 `;
@@ -42,13 +42,13 @@ export const StyledAboutImage = styled.div`
   }
 `;
 
-export const StyledAboutTextContainer = styled.div<AboutProps>`
+export const StyledTextContainer = styled.div<AboutProps>`
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: ${(props) => props.width};
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: ${(props) => props.mediaQuery}) {
     width: 100%;
     padding: 0 8px;
   }
@@ -64,7 +64,7 @@ export const StyledCardContainer = styled.div<AboutProps>`
   }
 `;
 
-export const StyledAboutText = styled.span<AboutProps>`
+export const StyledText = styled.span<AboutProps>`
   color: ${(props) => props.color};
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};

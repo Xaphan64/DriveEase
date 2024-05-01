@@ -11,6 +11,8 @@ import { useNavigate } from "react-router-dom";
 // MISC
 
 // COMPONENTS
+
+// CONFIGURATION
 type VehicleCardProps = {
   image: string;
   brand: string;
@@ -22,7 +24,6 @@ type VehicleCardProps = {
   fuel: string;
 };
 
-// CONFIGURATION
 const VehicleCard = (props: VehicleCardProps) => {
   // PROPERTIES
 

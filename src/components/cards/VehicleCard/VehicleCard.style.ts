@@ -3,11 +3,15 @@ import styled from "styled-components";
 export const StyledVehicleCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 354px;
   height: 600px;
   justify-content: space-between;
 
-  border: 1px solid gray;
+  border: 2px solid gray;
+
+  @media screen and (max-width: 355px) {
+    width: 290px;
+  }
 `;
 
 export const StyledVehicleImage = styled.div`
@@ -16,7 +20,10 @@ export const StyledVehicleImage = styled.div`
     height: 300px;
 
     object-fit: cover;
-    object-position: 50%;
+
+    @media screen and (max-width: 355px) {
+      width: 286px;
+    }
   }
 `;
 

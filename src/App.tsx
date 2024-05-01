@@ -13,6 +13,8 @@ import Layout from "./components/layout/Layout/Layout";
 import Homepage from "./components/pages/Homepage/Homepage";
 import About from "./components/pages/About/About";
 import VehicleModels from "./components/pages/VehicleModels/VehicleModels";
+import Testimonials from "./components/pages/Testimonials/Testimonials";
+import Team from "./components/pages/Team/Team";
 
 // CONFIGURATION
 const App = () => {
@@ -38,8 +40,8 @@ const App = () => {
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
           <Route path="/models" element={<VehicleModels />} />
-          <Route path="/testimonials" element={<h1>testimonials</h1>} />
-          <Route path="/team" element={<h1>our team</h1>} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<h1>contact</h1>} />
         </Route>
       </Routes>
