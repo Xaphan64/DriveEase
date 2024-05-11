@@ -12,10 +12,10 @@ export const StyledTestimonialCardContainer = styled.div`
 
 export const StyledTestimonialContainer = styled.div<TestimotialsProps>`
   display: flex;
-  justify-content: ${(props) => props.justifyContent};
-  align-items: ${(props) => props.alignitems};
+  justify-content: ${(props) => props.$justifyContent};
+  align-items: ${(props) => props.$alignitems};
   flex-direction: ${(props) => props.$flexDirection};
-  gap: ${(props) => props.gap};
+  gap: ${(props) => props.$gap};
 
   img {
     width: 50px;
@@ -39,8 +39,8 @@ export const StyledTestimonialText = styled.span<TestimotialsProps>`
 type TestimotialsProps = {
   fontSize?: string;
   fontWeight?: string;
-  justifyContent?: string;
-  alignitems?: string;
+  $justifyContent?: string;
+  $alignitems?: string;
   $flexDirection?: string;
-  gap?: string;
+  $gap?: string;
 };

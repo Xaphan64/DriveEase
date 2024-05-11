@@ -66,7 +66,7 @@ const Footer = () => {
       </StyledFooterItem>
 
       <StyledFooterItem>
-        <StyledFooterTitle textTransform="uppercase">about project</StyledFooterTitle>
+        <StyledFooterTitle $textTransform="uppercase">about project</StyledFooterTitle>
 
         <StyledFooterText color="#9e9689" width="300px">
           This project was made by Alexandru-Daniel Sarbu in React using Typescript and Styled Components
@@ -74,7 +74,7 @@ const Footer = () => {
       </StyledFooterItem>
 
       <StyledFooterItem>
-        <StyledFooterTitle textTransform="uppercase">working hours</StyledFooterTitle>
+        <StyledFooterTitle $textTransform="uppercase">working hours</StyledFooterTitle>
 
         <StyledFooterText width="216px">Mon - Fri: 8:00 - 20:00</StyledFooterText>
 
@@ -84,7 +84,7 @@ const Footer = () => {
       </StyledFooterItem>
 
       <StyledFooterItem>
-        <StyledFooterTitle textTransform="uppercase">subscription</StyledFooterTitle>
+        <StyledFooterTitle $textTransform="uppercase">subscription</StyledFooterTitle>
 
         <StyledFooterText width="300px">Subscribe your Email address for latest news & updates.</StyledFooterText>
 
@@ -101,9 +101,9 @@ const Footer = () => {
           <StyledButton
             type="submit"
             onClick={handleSubscription}
-            backgroundColor="#f2613f"
+            $backgroundColor="#f2613f"
             hoverColor="#ffffff"
-            hoverBackgroundColor="#fa4226"
+            $hoverBackgroundColor="#fa4226"
           >
             subscribe
           </StyledButton>

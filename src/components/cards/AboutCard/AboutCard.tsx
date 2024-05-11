@@ -18,10 +18,10 @@ type AboutCardProps = {
   fontWeight?: "bold" | "normal" | "lighter";
   color?: string;
   $flexDirection?: "row" | "column";
-  whiteSpace?: string;
+  $whiteSpace?: string;
   width?: string;
-  svgDimension?: string;
-  backgroundColor?: string;
+  $svgDimension?: string;
+  $backgroundColor?: string;
 };
 
 const AboutCard = (props: AboutCardProps) => {
@@ -37,11 +37,11 @@ const AboutCard = (props: AboutCardProps) => {
 
   // EVENT HANDLERS
   return (
-    <StyledAboutCard svgDimension={props.svgDimension} backgroundColor={props.backgroundColor}>
+    <StyledAboutCard $svgDimension={props.$svgDimension} $backgroundColor={props.$backgroundColor}>
       {props.children}
 
       <StyledAboutCardTextContainer $flexDirection={props.$flexDirection} width={props.width}>
-        <StyledAboutCardText fontSize={props.fontSize} fontWeight={props.fontWeight} whiteSpace={props.whiteSpace}>
+        <StyledAboutCardText fontSize={props.fontSize} fontWeight={props.fontWeight} $whiteSpace={props.$whiteSpace}>
           {props.number}
         </StyledAboutCardText>
         <StyledAboutCardText color={props.color}>{props.text}</StyledAboutCardText>

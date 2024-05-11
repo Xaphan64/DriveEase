@@ -7,7 +7,7 @@ export const StyledInput = styled(CustomInput)<InputProps>`
   background-color: #232627;
   color: #ffffff;
   border: 1px solid #232627;
-  max-width: ${(props) => props.maxWidth};
+  max-width: ${(props) => props.$maxWidth};
 
   &:focus {
     outline: none;
@@ -24,7 +24,7 @@ export const StyledTextarea = styled(CustomTextarea)<InputProps>`
   background-color: #232627;
   color: #ffffff;
   border: 1px solid #232627;
-  max-width: ${(props) => props.maxWidth};
+  max-width: ${(props) => props.$maxWidth};
   height: 240px;
   resize: vertical;
 
@@ -39,5 +39,5 @@ export const StyledTextarea = styled(CustomTextarea)<InputProps>`
 `;
 
 type InputProps = {
-  maxWidth?: string;
+  $maxWidth?: string;
 };

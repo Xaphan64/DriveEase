@@ -18,8 +18,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 // CONFIGURATION
 export type HeaderProps = {
-  padding?: string;
-  alignitems?: string;
+  $padding?: string;
+  $alignitems?: string;
   height?: string;
 };
 
@@ -33,7 +33,7 @@ const Header = () => {
   const location = useLocation();
 
   // STATE CONSTANTS
-  const [showNavbar, setShowNavbar] = useState(false);
+  const [$showNavbar, setShowNavbar] = useState(false);
 
   // LIFE CYCLE
   useEffect(() => {
@@ -42,7 +42,7 @@ const Header = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledContainer padding="40px 32px" alignitems="center">
+    <StyledContainer $padding="40px 32px" $alignitems="center">
       <StyledLogo onClick={() => navigate("/")}>
         <img src={car} alt="car" />
 
@@ -78,7 +78,7 @@ const Header = () => {
         </NavButton>
       </StyledButtonContainer>
 
-      <StyledMobileButtonContainer showNavbar={showNavbar}>
+      <StyledMobileButtonContainer $showNavbar={$showNavbar}>
         <Button type="button" onClick={() => navigate("/")}>
           home
         </Button>
@@ -112,14 +112,14 @@ const Header = () => {
         <OrangeMobileButton
           type="button"
           onClick={() => navigate("/register")}
-          backgroundColor="#f2613f"
+          $backgroundColor="#f2613f"
           hoverColor="#ffffff"
-          hoverBackgroundColor="#fa4226"
+          $hoverBackgroundColor="#fa4226"
         >
           register
         </OrangeMobileButton>
 
-        {showNavbar ? (
+        {$showNavbar ? (
           <MobileButton type="button" onClick={() => setShowNavbar((prev) => !prev)}>
             <CloseIcon />
           </MobileButton>

@@ -35,13 +35,13 @@ const TestimonialCard = (props: TestimonialCardProps) => {
     <StyledTestimonialCardContainer>
       <StyledTestimonialText fontSize="20px">{props.text}</StyledTestimonialText>
 
-      <StyledTestimonialContainer justifyContent="space-between" alignitems="center">
-        <StyledTestimonialContainer alignitems="center" gap="8px">
+      <StyledTestimonialContainer $justifyContent="space-between" $alignitems="center">
+        <StyledTestimonialContainer $alignitems="center" $gap="8px">
           <StyledTestimonialContainer>
             <img src={props.image} alt="" />
           </StyledTestimonialContainer>
 
-          <StyledTestimonialContainer $flexDirection="column">
+          <StyledTestimonialContainer $flexDirection="column" $gap="4px">
             <StyledTestimonialText fontWeight="bold">{props.name}</StyledTestimonialText>
 
             <StyledTestimonialText>{props.location}</StyledTestimonialText>

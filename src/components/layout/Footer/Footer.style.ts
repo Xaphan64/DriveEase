@@ -40,7 +40,7 @@ export const StyledFooterItem = styled.div`
 `;
 
 export const StyledFooterTitle = styled.h2<FooterProps>`
-  text-transform: ${(props) => props.textTransform};
+  text-transform: ${(props) => props.$textTransform};
   display: flex;
   align-items: center;
   gap: 4px;
@@ -81,7 +81,7 @@ export const StyledFooterForm = styled.form`
 type FooterProps = {
   fontSize?: string;
   fontWeight?: string;
-  textTransform?: string;
+  $textTransform?: string;
   color?: string;
   width?: string;
 };

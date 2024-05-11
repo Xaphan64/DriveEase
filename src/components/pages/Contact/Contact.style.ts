@@ -5,12 +5,12 @@ export const ContactContainer = styled.div<ContactProps>`
   width: ${(props) => props.width};
   max-width: ${(props) => props.$maxWidth};
   flex-direction: ${(props) => props.$flexDirection};
-  align-items: ${(props) => props.alignitems};
+  align-items: ${(props) => props.$alignitems};
   justify-content: ${(props) => props.justifyContent};
-  gap: ${(props) => props.gap};
-  padding: ${(props) => props.padding};
+  gap: ${(props) => props.$gap};
+  padding: ${(props) => props.$padding};
 
-  @media screen and (max-width: ${(props) => props.mediaQuery}) {
+  @media screen and (max-width: ${(props) => props.$mediaQuery}) {
     flex-direction: column;
     align-items: center;
   }
@@ -33,11 +33,11 @@ export const ContactForm = styled.form`
 
 type ContactProps = {
   width?: string;
-  alignitems?: string;
+  $alignitems?: string;
   justifyContent?: string;
   $flexDirection?: string;
   $maxWidth?: string;
-  gap?: string;
-  padding?: string;
-  mediaQuery?: string;
+  $gap?: string;
+  $padding?: string;
+  $mediaQuery?: string;
 };

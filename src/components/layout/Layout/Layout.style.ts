@@ -11,9 +11,9 @@ export const StyledLayout = styled.div`
 export const StyledContainer = styled.div<HeaderProps>`
   display: flex;
   justify-content: center;
-  align-items: ${(props) => props.alignitems};
+  align-items: ${(props) => props.$alignitems};
   justify-content: space-between;
-  padding: ${(props) => props.padding};
+  padding: ${(props) => props.$padding};
   height: ${(props) => props.height};
   width: 1350px;
 

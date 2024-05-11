@@ -1,12 +1,8 @@
 // ASSETS
 
 // STYLES
-import {
-  HeaderCardContainer,
-  StyledHeaderCardContainer,
-  StyledHeaderImage,
-  StyledHeaderText,
-} from "./HeaderCard.style";
+import { HeaderCardContainer, StyledHeaderCardContainer } from "./HeaderCard.style";
+import { StyledHeaderImage, StyledHeaderText } from "./HeaderCard.style";
 
 // LIBRARIES
 import { useEffect, useState } from "react";

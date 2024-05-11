@@ -49,8 +49,14 @@ const Contact = () => {
     <StyledContainer>
       <HeaderCard />
 
-      <ContactContainer width="100%" alignitems="center" justifyContent="space-evenly" gap="32px" mediaQuery="1050px">
-        <ContactContainer $flexDirection="column" $maxWidth="400px" gap="24px" padding="0 16px">
+      <ContactContainer
+        width="100%"
+        $alignitems="center"
+        justifyContent="space-evenly"
+        $gap="32px"
+        $mediaQuery="1050px"
+      >
+        <ContactContainer $flexDirection="column" $maxWidth="400px" $gap="24px" $padding="0 16px">
           <StyledText fontSize="40px" fontWeight="bold">
             Need additional information?
           </StyledText>
@@ -61,28 +67,27 @@ const Contact = () => {
             inquiries promptly and provide personalized assistance tailored to your needs.
           </StyledText>
 
-          <ContactContainer $flexDirection="column" gap="8px" mediaQuery="1050px">
-            <ContactContainer gap="8px" alignitems="center">
+          <ContactContainer $flexDirection="column" $gap="8px" $mediaQuery="1050px">
+            <ContactContainer $gap="8px" $alignitems="center">
               <PhoneInTalkIcon />
               <StyledText fontSize="18px">(0123) 456 789</StyledText>
             </ContactContainer>
 
-            <ContactContainer gap="8px" alignitems="center">
+            <ContactContainer $gap="8px" $alignitems="center">
               <MailOutlineIcon />
               <StyledText fontSize="18px">easedrive@gmail.com</StyledText>
             </ContactContainer>
 
-            <ContactContainer gap="8px" alignitems="center">
+            <ContactContainer $gap="8px" $alignitems="center">
               <LocationOnIcon />
               <StyledText fontSize="18px">Bucharest, Romania</StyledText>
             </ContactContainer>
           </ContactContainer>
         </ContactContainer>
 
-        {/* <ContactContainer $flexDirection="column" $maxWidth="600px" width="100%" padding="0 16px"> */}
         <ContactForm>
-          <ContactContainer $flexDirection="column" gap="8px">
-            <ContactContainer gap="4px">
+          <ContactContainer $flexDirection="column" $gap="8px">
+            <ContactContainer $gap="4px">
               <StyledText fontSize="18px" fontWeight="bold">
                 Full Name
               </StyledText>
@@ -97,13 +102,13 @@ const Contact = () => {
               value={inputValues.fullName}
               placeholder="Ex. Popescu Cristian"
               onChange={handleInputChange}
-              maxWidth="600px"
+              $maxWidth="600px"
               required
             />
           </ContactContainer>
 
-          <ContactContainer $flexDirection="column" gap="8px">
-            <ContactContainer gap="4px">
+          <ContactContainer $flexDirection="column" $gap="8px">
+            <ContactContainer $gap="4px">
               <StyledText fontSize="18px" fontWeight="bold">
                 Email
               </StyledText>
@@ -118,13 +123,13 @@ const Contact = () => {
               value={inputValues.email}
               placeholder="your email address here"
               onChange={handleInputChange}
-              maxWidth="600px"
+              $maxWidth="600px"
               required
             />
           </ContactContainer>
 
-          <ContactContainer $flexDirection="column" gap="8px">
-            <ContactContainer gap="4px">
+          <ContactContainer $flexDirection="column" $gap="8px">
+            <ContactContainer $gap="4px">
               <StyledText fontSize="18px" fontWeight="bold">
                 Tell us about it
               </StyledText>
@@ -138,7 +143,7 @@ const Contact = () => {
               value={inputValues.text}
               placeholder="Write here..."
               onChange={handleInputChange}
-              maxWidth="600px"
+              $maxWidth="600px"
               required
             />
           </ContactContainer>
@@ -146,10 +151,10 @@ const Contact = () => {
           <StyledButton
             type="submit"
             onClick={handleSubmit}
-            backgroundColor="#f2613f"
+            $backgroundColor="#f2613f"
             hoverColor="#ffffff"
-            hoverBackgroundColor="#fa4226"
-            svgColor="#ffffff"
+            $hoverBackgroundColor="#fa4226"
+            svgColor="#ffffff !important"
           >
             <DraftsIcon />
             send message

@@ -34,7 +34,7 @@ export const StyledButtonContainer = styled.div`
 `;
 
 type Props = {
-  showNavbar: boolean;
+  $showNavbar: boolean;
 };
 
 export const StyledMobileButtonContainer = styled.div<Props>(
@@ -53,7 +53,7 @@ export const StyledMobileButtonContainer = styled.div<Props>(
     visibility: hidden;
     z-index: 10;
 
-    ${props.showNavbar &&
+    ${props.$showNavbar &&
     css`
       position: fixed;
       background-color: #2b2a2a;

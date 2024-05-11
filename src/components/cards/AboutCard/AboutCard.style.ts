@@ -7,9 +7,9 @@ export const StyledAboutCard = styled.div<AboutCardProps>`
 
   svg {
     color: #f2613f;
-    width: ${(props) => props.svgDimension};
-    height: ${(props) => props.svgDimension};
-    background-color: ${(props) => props.backgroundColor};
+    width: ${(props) => props.$svgDimension};
+    height: ${(props) => props.$svgDimension};
+    background-color: ${(props) => props.$backgroundColor};
     border-radius: 4px 32px 32px 32px;
   }
 `;
@@ -26,7 +26,7 @@ export const StyledAboutCardText = styled.span<AboutCardProps>`
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};
   color: ${(props) => props.color};
-  white-space: ${(props) => props.whiteSpace};
+  white-space: ${(props) => props.$whiteSpace};
   text-align: center;
 `;
 type AboutCardProps = {
@@ -34,8 +34,8 @@ type AboutCardProps = {
   fontSize?: string;
   fontWeight?: string;
   color?: string;
-  whiteSpace?: string;
+  $whiteSpace?: string;
   width?: string;
-  svgDimension?: string;
-  backgroundColor?: string;
+  $svgDimension?: string;
+  $backgroundColor?: string;
 };

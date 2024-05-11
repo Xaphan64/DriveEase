@@ -15,7 +15,7 @@ export const StyledTestimonialContainer = styled.div`
   justify-content: center;
   padding: 0 16px;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1040px) {
     flex-direction: column;
   }
 `;

@@ -11,9 +11,9 @@ export const StyledContainer = styled.div`
 
 export const StyledAbout = styled.div<AboutProps>`
   display: flex;
-  gap: ${(props) => props.gap};
+  gap: ${(props) => props.$gap};
   flex-direction: ${(props) => props.$flexDirection};
-  text-align: ${(props) => props.textAlign};
+  text-align: ${(props) => props.$textAlign};
 
   @media screen and (max-width: 1050px) {
     flex-direction: column;
@@ -47,8 +47,9 @@ export const StyledTextContainer = styled.div<AboutProps>`
   flex-direction: column;
   gap: 16px;
   width: ${(props) => props.width};
+  align-items: ${(props) => props.$alignItems};
 
-  @media screen and (max-width: ${(props) => props.mediaQuery}) {
+  @media screen and (max-width: ${(props) => props.$mediaQuery}) {
     width: 100%;
     padding: 0 8px;
   }
@@ -58,7 +59,7 @@ export const StyledCardContainer = styled.div<AboutProps>`
   display: flex;
   justify-content: space-around;
 
-  @media screen and (max-width: ${(props) => props.mediaQuery}) {
+  @media screen and (max-width: ${(props) => props.$mediaQuery}) {
     flex-direction: column;
     gap: 16px;
   }
@@ -81,8 +82,9 @@ type AboutProps = {
   color?: string;
   $lineHeight?: string;
   $flexDirection?: string;
-  textAlign?: string;
-  gap?: string;
+  $textAlign?: string;
+  $gap?: string;
   width?: string;
-  mediaQuery?: string;
+  $mediaQuery?: string;
+  $alignItems?: string;
 };

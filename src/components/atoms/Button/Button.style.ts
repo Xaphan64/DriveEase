@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import CustomButton from "./Button";
-import { Style } from "@mui/icons-material";
 
 export const Button = styled(CustomButton)`
   background: transparent;
@@ -21,8 +20,8 @@ export const Button = styled(CustomButton)`
 
 type ButtonProps = {
   width?: string;
-  backgroundColor?: string;
-  hoverBackgroundColor?: string;
+  $backgroundColor?: string;
+  $hoverBackgroundColor?: string;
   hoverColor?: string;
   border?: string;
   hoverBorder?: string;
@@ -31,8 +30,7 @@ type ButtonProps = {
 };
 
 export const StyledButton = styled(Button)<ButtonProps>`
-  /* background-color: #f2613f; */
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.$backgroundColor};
   color: ${(props) => props.color};
   padding: 16px 24px;
   border-radius: 4px;
@@ -44,10 +42,7 @@ export const StyledButton = styled(Button)<ButtonProps>`
   border: ${(props) => props.border};
 
   &:hover {
-    /* background-color: #fa4226;
-    color: #ffffff; */
-
-    background-color: ${(props) => props.hoverBackgroundColor};
+    background-color: ${(props) => props.$hoverBackgroundColor};
     color: ${(props) => props.hoverColor};
     border: ${(props) => props.hoverBorder};
   }
@@ -57,18 +52,6 @@ export const StyledButton = styled(Button)<ButtonProps>`
   }
 `;
 
-// export const BlackButton = styled(OrangeButton)`
-//   background-color: #ffffff;
-//   color: #0c0c0c;
-//   border: 1px solid #ffffff;
-
-//   &:hover {
-//     background-color: #0c0c0c;
-//     border: 1px solid #ffffff;
-//   }
-// `;
-
-// export const OrangeMobileButton = styled(OrangeButton)`
 export const OrangeMobileButton = styled(StyledButton)`
   @media screen and (max-width: 992px) {
     display: none;

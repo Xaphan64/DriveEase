@@ -5,10 +5,13 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 // STYLES
 import { StyledPageCategory, StyledPageContainer, StyledText, StyledTitle } from "./Homepage.style";
-import { Button, StyledButton } from "../../atoms/Button/Button.style";
+import { StyledButton } from "../../atoms/Button/Button.style";
 
 // LIBRARIES
 import { useNavigate } from "react-router-dom";
+import TestimonialPage from "../Testimonials/TestimonialPage";
+import AboutPageCard from "../About/AboutPageCard";
+import Phone from "./elements/Phone/Phone";
 
 // MISC
 
@@ -42,10 +45,10 @@ const Homepage = () => {
   // EVENT HANDLERS
   return (
     <StyledPageContainer>
-      <div style={cityStyles} />
+      {/* <div style={cityStyles} /> */}
 
       <StyledPageCategory>
-        <StyledPageCategory $flexDirection="column" gap="32px" width="40%">
+        <StyledPageCategory $flexDirection="column" $gap="32px" width="40%">
           <StyledText fontSize="24px" fontWeight="bold">
             Plan your trip now
           </StyledText>
@@ -69,13 +72,13 @@ const Homepage = () => {
             Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.
           </StyledText>
 
-          <StyledPageCategory $flexDirection="row" gap="32px">
+          <StyledPageCategory $flexDirection="row" $gap="32px">
             <StyledButton
               type="button"
               onClick={() => navigate("/")}
-              backgroundColor="#f2613f"
+              $backgroundColor="#f2613f"
               hoverColor="#ffffff"
-              hoverBackgroundColor="#fa4226"
+              $hoverBackgroundColor="#fa4226"
             >
               Book Ride <CheckCircleOutlineIcon />
             </StyledButton>
@@ -83,8 +86,8 @@ const Homepage = () => {
             <StyledButton
               type="button"
               onClick={() => navigate("/about")}
-              backgroundColor="#ffffff"
-              hoverBackgroundColor="#0c0c0c"
+              $backgroundColor="#ffffff"
+              $hoverBackgroundColor="#0c0c0c"
               color="#0c0c0c"
               hoverColor="#ffffff"
               hoverBorder="1px solid #ffffff"
@@ -102,11 +105,7 @@ const Homepage = () => {
         <h1>inputs</h1>
       </div>
 
-      <div>
-        <h1>card text</h1>
-        <h1>card text</h1>
-        <h1>card text</h1>
-      </div>
+      <AboutPageCard />
 
       <div>
         <h1>vehicles</h1>
@@ -122,17 +121,13 @@ const Homepage = () => {
         <h1>text</h1>
       </div>
 
-      <div>
-        <h1>client testimonials</h1>
-      </div>
+      <TestimonialPage />
 
       <div>
         <h1>FAQ</h1>
       </div>
 
-      <div>
-        <h1>phone download</h1>
-      </div>
+      <Phone />
     </StyledPageContainer>
   );
 };

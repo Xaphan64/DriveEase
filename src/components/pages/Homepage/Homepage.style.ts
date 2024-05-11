@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import city from "../../assets/city.png";
-// import test from "../../assets/test.webp";
 
 export const StyledPageContainer = styled.div`
   display: flex;
@@ -13,14 +11,14 @@ export const StyledPageContainer = styled.div`
 type PageCategoryProps = {
   $flexDirection?: "column" | "row";
   width?: string;
-  gap?: string;
+  $gap?: string;
 };
 
 export const StyledPageCategory = styled.div<PageCategoryProps>`
   display: flex;
   flex-direction: ${(props) => props.$flexDirection};
   width: ${(props) => props.width};
-  gap: ${(props) => props.gap};
+  gap: ${(props) => props.$gap};
 
   /* border: 1px solid red; */
 `;
