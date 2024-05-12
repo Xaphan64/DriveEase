@@ -14,6 +14,10 @@ export const StyledPhoneContainer = styled.div<PhoneProps>`
     border: 2px solid gray;
     border-radius: 16px;
     cursor: pointer;
+
+    @media screen and (max-width: 800px) {
+      width: 280px;
+    }
   }
 
   @media screen and (max-width: 800px) {

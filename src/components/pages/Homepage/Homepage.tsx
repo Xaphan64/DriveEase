@@ -9,13 +9,16 @@ import { StyledButton } from "../../atoms/Button/Button.style";
 
 // LIBRARIES
 import { useNavigate } from "react-router-dom";
-import TestimonialPage from "../Testimonials/TestimonialPage";
-import AboutPageCard from "../About/AboutPageCard";
-import Phone from "./elements/Phone/Phone";
 
 // MISC
 
 // COMPONENTS
+import TestimonialPage from "../Testimonials/TestimonialPage";
+import AboutPageCard from "../About/AboutPageCard";
+import Phone from "./elements/Phone/Phone";
+import Questions from "./elements/Questions/Questions";
+import HomepageContactCard from "../../cards/ContactCard/HomepageContactCard";
+import Choose from "./elements/Choose/Choose";
 
 // CONFIGURATION
 const cityStyles: React.CSSProperties = {
@@ -83,7 +86,7 @@ const Homepage = () => {
               Book Ride <CheckCircleOutlineIcon />
             </StyledButton>
 
-            <StyledButton
+            {/* <StyledButton
               type="button"
               onClick={() => navigate("/about")}
               $backgroundColor="#ffffff"
@@ -94,7 +97,7 @@ const Homepage = () => {
               border="1px solid #ffffff"
             >
               Learn More <NavigateNextIcon />
-            </StyledButton>
+            </StyledButton> */}
           </StyledPageCategory>
         </StyledPageCategory>
 
@@ -111,21 +114,13 @@ const Homepage = () => {
         <h1>vehicles</h1>
       </div>
 
-      <div>
-        <h1>white color card</h1>
-      </div>
+      <HomepageContactCard />
 
-      <div>
-        <h1>car image with background</h1>
-
-        <h1>text</h1>
-      </div>
+      <Choose />
 
       <TestimonialPage />
 
-      <div>
-        <h1>FAQ</h1>
-      </div>
+      <Questions />
 
       <Phone />
     </StyledPageContainer>

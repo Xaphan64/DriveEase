@@ -6,7 +6,7 @@ export const ContactContainer = styled.div<ContactProps>`
   max-width: ${(props) => props.$maxWidth};
   flex-direction: ${(props) => props.$flexDirection};
   align-items: ${(props) => props.$alignitems};
-  justify-content: ${(props) => props.justifyContent};
+  justify-content: ${(props) => props.$justifyContent};
   gap: ${(props) => props.$gap};
   padding: ${(props) => props.$padding};
 
@@ -34,7 +34,7 @@ export const ContactForm = styled.form`
 type ContactProps = {
   width?: string;
   $alignitems?: string;
-  justifyContent?: string;
+  $justifyContent?: string;
   $flexDirection?: string;
   $maxWidth?: string;
   $gap?: string;

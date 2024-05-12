@@ -7,17 +7,17 @@ import DraftsIcon from "@mui/icons-material/Drafts";
 // STYLES
 import { StyledContainer, StyledText } from "../About/About.style";
 import { ContactContainer, ContactForm } from "./Contact.style";
+import { StyledButton } from "../../atoms/Button/Button.style";
+import { StyledInput, StyledTextarea } from "../../atoms/Input/Input.style";
 
 // LIBRARIES
 
 // MISC
+import { useForm } from "../../hooks/useForm";
 
 // COMPONENTS
 import ContactCard from "../../cards/ContactCard/ContactCard";
 import HeaderCard from "../../cards/HeaderCard/HeaderCard";
-import { StyledInput, StyledTextarea } from "../../atoms/Input/Input.style";
-import { useForm } from "../../hooks/useForm";
-import { StyledButton } from "../../atoms/Button/Button.style";
 
 // CONFIGURATION
 const Contact = () => {
@@ -52,7 +52,7 @@ const Contact = () => {
       <ContactContainer
         width="100%"
         $alignitems="center"
-        justifyContent="space-evenly"
+        $justifyContent="space-evenly"
         $gap="32px"
         $mediaQuery="1050px"
       >

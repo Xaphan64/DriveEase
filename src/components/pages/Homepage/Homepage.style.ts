@@ -19,8 +19,6 @@ export const StyledPageCategory = styled.div<PageCategoryProps>`
   flex-direction: ${(props) => props.$flexDirection};
   width: ${(props) => props.width};
   gap: ${(props) => props.$gap};
-
-  /* border: 1px solid red; */
 `;
 
 type TextProps = {
@@ -49,7 +47,6 @@ export const StyledTitle = styled.h1`
     display: flex;
     flex-direction: row;
     gap: 8px;
-    /* white-space: nowrap; */
 
     p {
       color: #f2613f;

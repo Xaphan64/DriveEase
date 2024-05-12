@@ -1,6 +1,7 @@
 // ASSETS
 import android from "../../../../assets/android.png";
 import ios from "../../../../assets/ios.png";
+
 // STYLES
 import { StyledPhoneContainer, StyledPhoneImage, StyledPhoneText } from "./Phone.style";
 

@@ -1,27 +1,29 @@
 import styled from "styled-components";
 import carSide from "../../assets/carSide.png";
 
-export const StyledContactCardContainer = styled.div`
+export const StyledContactCardContainer = styled.div<ContactCardProps>`
   position: static;
   padding-bottom: 100px;
+  padding-bottom: ${(props) => props.paddingButtom};
 
   @media screen and (max-width: 1200px) {
     padding-bottom: 140px;
   }
 `;
 
-export const StyledContactCard = styled.div`
+export const StyledContactCard = styled.div<ContactCardProps>`
   background-image: url(${carSide});
   background-repeat: no-repeat;
   background-position: 0 20%;
-  background-color: gray;
+  background-color: ${(props) => props.backgroundColor};
   width: 100%;
   position: absolute;
   right: 0;
   display: flex;
+  flex-direction: ${(props) => props.flexDirection};
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: ${(props) => props.gap};
   height: 150px;
 
   @media screen and (max-width: 800px) {
@@ -32,8 +34,8 @@ export const StyledContactCard = styled.div`
   }
 `;
 
-export const StyledCardText = styled.span`
-  font-size: 32px;
+export const StyledCardText = styled.span<ContactCardProps>`
+  font-size: ${(props) => props.fontSize};
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -63,3 +65,11 @@ export const StyledCardText = styled.span`
     }
   }
 `;
+
+type ContactCardProps = {
+  flexDirection?: string;
+  gap?: string;
+  paddingButtom?: string;
+  fontSize?: string;
+  backgroundColor?: string;
+};
