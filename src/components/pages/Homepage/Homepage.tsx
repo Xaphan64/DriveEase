@@ -19,6 +19,7 @@ import Phone from "./elements/Phone/Phone";
 import Questions from "./elements/Questions/Questions";
 import HomepageContactCard from "../../cards/ContactCard/HomepageContactCard";
 import Choose from "./elements/Choose/Choose";
+import Vehicles from "./elements/Vehicles/Vehicles";
 
 // CONFIGURATION
 const cityStyles: React.CSSProperties = {
@@ -110,9 +111,7 @@ const Homepage = () => {
 
       <AboutPageCard />
 
-      <div>
-        <h1>vehicles</h1>
-      </div>
+      <Vehicles />
 
       <HomepageContactCard />
 

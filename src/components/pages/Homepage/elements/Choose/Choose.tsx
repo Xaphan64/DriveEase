@@ -3,6 +3,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import EmojiTransportationIcon from "@mui/icons-material/EmojiTransportation";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
+import chooseCars from "../../../../assets/chooseCars.png";
 
 // STYLES
 import { StyledButton } from "../../../../atoms/Button/Button.style";
@@ -31,7 +32,9 @@ const Choose = () => {
   // EVENT HANDLERS
   return (
     <StyledChooseContainer flexDirection="column">
-      <StyledChooseImage />
+      <StyledChooseImage>
+        <img src={chooseCars} alt="" />
+      </StyledChooseImage>
 
       <StyledChooseContainer justifyContent="space-evenly" $mediaQuery="1040px">
         <StyledChooseContainer flexDirection="column" gap="24px" $mediaQuery="1040px">

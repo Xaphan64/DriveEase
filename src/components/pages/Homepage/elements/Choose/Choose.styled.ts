@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import chooseCars from "../../../../assets/chooseCars.png";
 
 export const StyledChooseContainer = styled.div<ChooseProps>`
   display: flex;
@@ -18,25 +17,12 @@ export const StyledChooseContainer = styled.div<ChooseProps>`
 `;
 
 export const StyledChooseImage = styled.div`
-  background-image: url(${chooseCars});
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: clamp(200px, 100vw, 1920px);
-  height: clamp(200px, 100vh, 1080px);
-  z-index: -1;
-  align-self: center;
-  margin-bottom: -10%;
+  display: flex;
+  justify-content: center;
 
-  @media screen and (max-width: 1600px) {
-    margin-bottom: -20%;
-  }
-
-  @media screen and (max-width: 1300px) {
-    margin-bottom: -25%;
-  }
-
-  @media screen and (max-width: 1000px) {
-    margin-bottom: -40%;
+  img {
+    max-width: 100%;
+    height: auto;
   }
 `;
 
