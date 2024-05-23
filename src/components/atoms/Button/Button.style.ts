@@ -18,17 +18,6 @@ export const Button = styled(CustomButton)`
   }
 `;
 
-type ButtonProps = {
-  width?: string;
-  $backgroundColor?: string;
-  $hoverBackgroundColor?: string;
-  hoverColor?: string;
-  border?: string;
-  hoverBorder?: string;
-  color?: string;
-  svgColor?: string;
-};
-
 export const StyledButton = styled(Button)<ButtonProps>`
   background-color: ${(props) => props.$backgroundColor};
   color: ${(props) => props.color};
@@ -39,6 +28,7 @@ export const StyledButton = styled(Button)<ButtonProps>`
   justify-content: center;
   gap: 8px;
   width: ${(props) => props.width};
+  max-width: ${(props) => props.maxWidth};
   border: ${(props) => props.border};
 
   &:hover {
@@ -51,6 +41,18 @@ export const StyledButton = styled(Button)<ButtonProps>`
     color: ${(props) => props.svgColor};
   }
 `;
+
+type ButtonProps = {
+  width?: string;
+  $backgroundColor?: string;
+  $hoverBackgroundColor?: string;
+  hoverColor?: string;
+  border?: string;
+  hoverBorder?: string;
+  color?: string;
+  svgColor?: string;
+  maxWidth?: string;
+};
 
 export const OrangeMobileButton = styled(StyledButton)`
   @media screen and (max-width: 992px) {

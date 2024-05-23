@@ -8,12 +8,6 @@ export const StyledPageContainer = styled.div`
   width: 100%;
 `;
 
-type PageCategoryProps = {
-  $flexDirection?: "column" | "row";
-  width?: string;
-  $gap?: string;
-};
-
 export const StyledPageCategory = styled.div<PageCategoryProps>`
   display: flex;
   flex-direction: ${(props) => props.$flexDirection};
@@ -21,35 +15,52 @@ export const StyledPageCategory = styled.div<PageCategoryProps>`
   gap: ${(props) => props.$gap};
 `;
 
-type TextProps = {
-  fontSize: string;
-  color?: string;
-  fontWeight?: string;
-};
-
 export const StyledText = styled.span<TextProps>`
   font-size: ${(props) => props.fontSize};
   color: ${(props) => props.color};
   font-weight: ${(props) => props.fontWeight};
   display: flex;
   gap: 16px;
+`;
 
-  p {
-    color: #f2613f;
+export const StyledBackgroundImage = styled.img`
+  position: absolute;
+  max-width: 60%;
+  height: auto;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.5;
+
+  @media screen and (max-width: 1400px) {
+    top: 10%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    top: 20%;
+  }
+
+  @media screen and (max-width: 1050px) {
+    top: 30%;
+  }
+
+  @media screen and (max-width: 992px) {
+    top: 10%;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `;
 
-export const StyledTitle = styled.h1`
-  display: flex;
-  flex-direction: column;
+type PageCategoryProps = {
+  $flexDirection?: "column" | "row";
+  width?: string;
+  $gap?: string;
+};
 
-  span {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-
-    p {
-      color: #f2613f;
-    }
-  }
-`;
+type TextProps = {
+  fontSize: string;
+  color?: string;
+  fontWeight?: string;
+};

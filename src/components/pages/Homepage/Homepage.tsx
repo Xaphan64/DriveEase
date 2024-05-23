@@ -1,14 +1,10 @@
 // ASSETS
-import city from "../../assets/city.png";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import backgroundImage from "../../assets/backgroundImage.png";
 
 // STYLES
-import { StyledPageCategory, StyledPageContainer, StyledText, StyledTitle } from "./Homepage.style";
-import { StyledButton } from "../../atoms/Button/Button.style";
+import { StyledBackgroundImage, StyledPageContainer } from "./Homepage.style";
 
 // LIBRARIES
-import { useNavigate } from "react-router-dom";
 
 // MISC
 
@@ -20,19 +16,10 @@ import Questions from "./elements/Questions/Questions";
 import HomepageContactCard from "../../cards/ContactCard/HomepageContactCard";
 import Choose from "./elements/Choose/Choose";
 import Vehicles from "./elements/Vehicles/Vehicles";
+import First from "./elements/First/First";
+import Inputs from "./elements/Inputs/Inputs";
 
 // CONFIGURATION
-const cityStyles: React.CSSProperties = {
-  backgroundImage: `url(${city})`,
-  width: "100%",
-  height: "100%",
-  position: "absolute",
-  right: "0",
-  top: "0",
-  zIndex: "-1",
-  backgroundSize: "cover",
-  // backgroundPosition: "center",
-};
 
 const Homepage = () => {
   // PROPERTIES
@@ -40,7 +27,6 @@ const Homepage = () => {
   // API REQUESTS
 
   // LIBRARY CONSTANTS
-  const navigate = useNavigate();
 
   // STATE CONSTANTS
 
@@ -49,65 +35,11 @@ const Homepage = () => {
   // EVENT HANDLERS
   return (
     <StyledPageContainer>
-      {/* <div style={cityStyles} /> */}
+      <StyledBackgroundImage src={backgroundImage} alt="" />
 
-      <StyledPageCategory>
-        <StyledPageCategory $flexDirection="column" $gap="32px" width="40%">
-          <StyledText fontSize="24px" fontWeight="bold">
-            Plan your trip now
-          </StyledText>
+      <First />
 
-          {/* <StyledText $fontSize="60px" $fontWeight="bold">
-            Save
-            <StyledText $fontSize="60px" $fontWeight="bold" $color="#f2613f">
-              big
-            </StyledText>
-            with our car rental
-          </StyledText> */}
-
-          <StyledTitle>
-            <span>
-              Save <p>big</p> with our
-            </span>
-            <span>car rental</span>
-          </StyledTitle>
-
-          <StyledText fontSize="16px" color="gray">
-            Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.
-          </StyledText>
-
-          <StyledPageCategory $flexDirection="row" $gap="32px">
-            <StyledButton
-              type="button"
-              onClick={() => navigate("/")}
-              $backgroundColor="#f2613f"
-              hoverColor="#ffffff"
-              $hoverBackgroundColor="#fa4226"
-            >
-              Book Ride <CheckCircleOutlineIcon />
-            </StyledButton>
-
-            {/* <StyledButton
-              type="button"
-              onClick={() => navigate("/about")}
-              $backgroundColor="#ffffff"
-              $hoverBackgroundColor="#0c0c0c"
-              color="#0c0c0c"
-              hoverColor="#ffffff"
-              hoverBorder="1px solid #ffffff"
-              border="1px solid #ffffff"
-            >
-              Learn More <NavigateNextIcon />
-            </StyledButton> */}
-          </StyledPageCategory>
-        </StyledPageCategory>
-
-        <h1>image</h1>
-      </StyledPageCategory>
-
-      <div>
-        <h1>inputs</h1>
-      </div>
+      <Inputs />
 
       <AboutPageCard />
 
