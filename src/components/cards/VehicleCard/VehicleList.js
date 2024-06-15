@@ -156,3 +156,30 @@ export const VehicleList = [
     fuel: "Gasoline",
   },
 ];
+
+export const CityList = [
+  {
+    id: 0,
+    city: "Bucharest",
+  },
+  {
+    id: 1,
+    city: "Cluj-Napoca",
+  },
+  {
+    id: 2,
+    city: "Iasi",
+  },
+  {
+    id: 3,
+    city: "Constanta",
+  },
+  {
+    id: 4,
+    city: "Craiova",
+  },
+  {
+    id: 5,
+    city: "Brasov",
+  },
+];
