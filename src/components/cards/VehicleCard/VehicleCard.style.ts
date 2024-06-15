@@ -6,7 +6,7 @@ export const StyledVehicleCardContainer = styled.div`
   width: 354px;
   height: 600px;
   justify-content: space-between;
-
+  background-color: #232627;
   border: 2px solid gray;
 
   @media screen and (max-width: 355px) {

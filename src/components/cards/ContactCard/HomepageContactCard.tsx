@@ -23,8 +23,8 @@ const HomepageContactCard = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledContactCardContainer paddingButtom="140px">
-      <StyledContactCard flexDirection="column" gap="16px" backgroundColor="gray">
+    <StyledContactCardContainer $paddingButtom="140px">
+      <StyledContactCard $flexDirection="column" $gap="16px" $backgroundColor="gray">
         <StyledCardText fontSize="40px" color="white">
           Save big with our cheap car rental!
         </StyledCardText>

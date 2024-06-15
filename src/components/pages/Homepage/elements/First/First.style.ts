@@ -4,10 +4,10 @@ export const StyledFirstContainer = styled.div<FirstProps>`
   display: flex;
   flex-direction: ${(props) => props.$flexDirection};
   gap: ${(props) => props.$gap};
-  padding: ${(props) => props.padding};
-  max-width: ${(props) => props.maxWidth};
+  padding: ${(props) => props.$padding};
+  max-width: ${(props) => props.$maxWidth};
   height: ${(props) => props.height};
-  align-items: ${(props) => props.alignItems};
+  align-items: ${(props) => props.$alignItems};
   position: relative;
   margin: 100px 0;
 
@@ -21,7 +21,7 @@ export const StyledFirstContainer = styled.div<FirstProps>`
     align-self: center;
   }
 
-  @media screen and (max-width: ${(props) => props.mediaQuery}) {
+  @media screen and (max-width: ${(props) => props.$mediaQuery}) {
     flex-direction: column;
   }
 `;
@@ -53,12 +53,12 @@ export const StyledImage = styled.img`
 type FirstProps = {
   $flexDirection?: string;
   $gap?: string;
-  padding?: string;
-  maxWidth?: string;
+  $padding?: string;
+  $maxWidth?: string;
   fontSize?: string;
   fontWeight?: string;
   color?: string;
   height?: string;
-  alignItems?: string;
-  mediaQuery?: string;
+  $alignItems?: string;
+  $mediaQuery?: string;
 };

@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const StyledChooseContainer = styled.div<ChooseProps>`
   display: flex;
-  flex-direction: ${(props) => props.flexDirection};
-  justify-content: ${(props) => props.justifyContent};
-  align-items: ${(props) => props.alignItems};
-  gap: ${(props) => props.gap};
+  flex-direction: ${(props) => props.$flexDirection};
+  justify-content: ${(props) => props.$justifyContent};
+  align-items: ${(props) => props.$alignItems};
+  gap: ${(props) => props.$gap};
   margin-top: ${(props) => props.marginTop};
 
   @media screen and (max-width: ${(props) => props.$mediaQuery}) {
@@ -30,8 +30,8 @@ export const StyledChooseText = styled.span<ChooseProps>`
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};
   color: ${(props) => props.color};
-  max-width: ${(props) => props.maxWidth};
-  line-height: ${(props) => props.lineHeight};
+  max-width: ${(props) => props.$maxWidth};
+  line-height: ${(props) => props.$lineHeight};
 `;
 
 export const StyledChooseSvg = styled.svg`
@@ -44,15 +44,15 @@ export const StyledChooseSvg = styled.svg`
 `;
 
 type ChooseProps = {
-  flexDirection?: string;
-  justifyContent?: string;
-  gap?: string;
+  $flexDirection?: string;
+  $justifyContent?: string;
+  $gap?: string;
   fontSize?: string;
   fontWeight?: string;
   color?: string;
-  maxWidth?: string;
-  lineHeight?: string;
-  alignItems?: string;
+  $maxWidth?: string;
+  $lineHeight?: string;
+  $alignItems?: string;
   $mediaQuery?: string;
   marginTop?: string;
 };

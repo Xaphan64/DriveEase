@@ -24,8 +24,8 @@ const ContactCard = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledContactCardContainer paddingButtom="100px">
-      <StyledContactCard gap="32px" backgroundColor="gray">
+    <StyledContactCardContainer $paddingButtom="100px">
+      <StyledContactCard $gap="32px" $backgroundColor="gray">
         <StyledCardText fontSize="32px">Book a car by getting in touch with us</StyledCardText>
         <StyledCardText color="#f2613f" fontSize="32px">
           <LocalPhoneIcon />

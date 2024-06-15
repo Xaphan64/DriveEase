@@ -28,8 +28,8 @@ export const StyledButton = styled(Button)<ButtonProps>`
   justify-content: center;
   gap: 8px;
   width: ${(props) => props.width};
-  max-width: ${(props) => props.maxWidth};
-  border: ${(props) => props.border};
+  max-width: ${(props) => props.$maxWidth};
+  border: ${(props) => props.$border};
 
   &:hover {
     background-color: ${(props) => props.$hoverBackgroundColor};
@@ -47,11 +47,11 @@ type ButtonProps = {
   $backgroundColor?: string;
   $hoverBackgroundColor?: string;
   hoverColor?: string;
-  border?: string;
+  $border?: string;
   hoverBorder?: string;
   color?: string;
   svgColor?: string;
-  maxWidth?: string;
+  $maxWidth?: string;
 };
 
 export const OrangeMobileButton = styled(StyledButton)`

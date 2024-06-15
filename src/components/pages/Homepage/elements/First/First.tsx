@@ -5,10 +5,10 @@ import firstCar from "../../../../assets/firstCar.png";
 
 // STYLES
 import { StyledFirstContainer, StyledFirstText, StyledImage } from "./First.style";
+import { StyledButton } from "../../../../atoms/Button/Button.style";
 
 // LIBRARIES
 import { useNavigate } from "react-router-dom";
-import { StyledButton } from "../../../../atoms/Button/Button.style";
 
 // MISC
 
@@ -29,8 +29,8 @@ const First = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledFirstContainer $flexDirection="row" $gap="32px" maxWidth="100%" padding="0 24px">
-      <StyledFirstContainer $flexDirection="column" $gap="24px" maxWidth="500px">
+    <StyledFirstContainer $flexDirection="row" $gap="32px" $maxWidth="100%" $padding="0 24px">
+      <StyledFirstContainer $flexDirection="column" $gap="24px" $maxWidth="500px">
         <StyledFirstText fontSize="24px" fontWeight="bold">
           Plan your trip now
         </StyledFirstText>
@@ -43,7 +43,7 @@ const First = () => {
           Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.
         </StyledFirstText>
 
-        <StyledFirstContainer $flexDirection="row" $gap="32px" mediaQuery="450px">
+        <StyledFirstContainer $flexDirection="row" $gap="32px" $mediaQuery="450px">
           <StyledButton
             type="button"
             onClick={() => navigate("/")}
@@ -63,7 +63,7 @@ const First = () => {
             color="#0c0c0c"
             hoverColor="#ffffff"
             hoverBorder="1px solid #ffffff"
-            border="1px solid #ffffff"
+            $border="1px solid #ffffff"
             width="280px"
           >
             Learn More <NavigateNextIcon />

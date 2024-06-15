@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledTeamCard = styled.div`
   border: 2px solid gray;
+  background-color: #232627;
 
   img {
     width: 350px;

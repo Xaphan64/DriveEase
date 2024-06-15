@@ -6,7 +6,7 @@ export const StyledTestimonialCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
-
+  background-color: #232627;
   border: 1px solid gray;
 `;
 
