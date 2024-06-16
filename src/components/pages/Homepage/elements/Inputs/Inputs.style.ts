@@ -10,6 +10,7 @@ export const StyledInputsContainer = styled.div<InputsProps>`
   align-items: ${(props) => props.$alignItems};
   justify-content: ${(props) => props.$justifyContent};
   border-radius: ${(props) => props.$borderRadius};
+  border-bottom: ${(props) => props.$borderBottom};
 
   @media screen and (max-width: ${(props) => props.$mediaQuery}) {
     padding: 12px 20px;
@@ -92,6 +93,14 @@ export const StyledDateInput = styled.input`
   }
 `;
 
+export const StyledTimeInput = styled(StyledDateInput)`
+  padding: 0 4px;
+  margin: 0px;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 2px;
+`;
+
 export const StyledSearchButton = styled.button`
   padding: 8px;
   font-size: 16px;
@@ -123,7 +132,7 @@ export const StyledModalBackground = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
 `;
 
-export const StyledModal = styled.div`
+export const StyledModal = styled.form`
   z-index: 1;
   background-color: rgba(0, 0, 0, 1);
   display: flex;
@@ -133,9 +142,14 @@ export const StyledModal = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  max-width: 700px;
+`;
 
-  // de sters TODO:
-  width: 830px;
+export const StyledModalImage = styled.img`
+  max-width: 350px;
+  max-height: 300px;
+  height: auto;
+  width: 100%;
 `;
 
 type InputsProps = {
@@ -152,4 +166,5 @@ type InputsProps = {
   $borderRadius?: string;
   $mediaQuery?: string;
   $backgroundColor?: string;
+  $borderBottom?: string;
 };

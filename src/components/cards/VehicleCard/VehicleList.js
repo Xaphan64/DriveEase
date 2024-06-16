@@ -1,7 +1,7 @@
 import toyotaCorolla from "../../assets/toyotaCorolla.jpg";
 import nissanAltima from "../../assets/nissanAltima.jpg";
 import chevroletEquinox from "../../assets/chevroletEquinox.jpg";
-import fordFustion from "../../assets/fordFusion.jpg";
+import fordFusion from "../../assets/fordFusion.jpg";
 import hondaCrv from "../../assets/hondaCrv.jpg";
 import toyotaCamry from "../../assets/toyotaCamry.jpg";
 import kiaOptima from "../../assets/kiaOptima.jpg";
@@ -10,11 +10,24 @@ import hyundaySonata from "../../assets/hyundaySonata.jpg";
 import subaruOutback from "../../assets/subaruOutback.jpg";
 import volkswagenJetta from "../../assets/volkswagenJetta.jpg";
 import nissanQuest from "../../assets/nissanQuest.jpg";
+import corolla from "../../assets/corolla.png";
+import altima from "../../assets/altima.png";
+import equinox from "../../assets/equinox.png";
+import fusion from "../../assets/fusion.png";
+import crv from "../../assets/crv.png";
+import camry from "../../assets/camry.png";
+import optima from "../../assets/optima.png";
+import cherokee from "../../assets/cherokee.png";
+import sonata from "../../assets/sonata.png";
+import outback from "../../assets/outback.png";
+import jetta from "../../assets/jetta.png";
+import quest from "../../assets/quest.png";
 
 export const VehicleList = [
   {
     id: 0,
     image: toyotaCorolla,
+    pngImage: corolla,
     brand: "Toyota",
     model: "Corolla",
     year: "2019",
@@ -27,6 +40,7 @@ export const VehicleList = [
   {
     id: 1,
     image: nissanAltima,
+    pngImage: altima,
     brand: "Nissan",
     model: "Altima",
     year: "2017",
@@ -39,6 +53,7 @@ export const VehicleList = [
   {
     id: 2,
     image: chevroletEquinox,
+    pngImage: equinox,
     brand: "Chevrolet",
     model: "Equinox",
     year: "2018",
@@ -50,7 +65,8 @@ export const VehicleList = [
 
   {
     id: 3,
-    image: fordFustion,
+    image: fordFusion,
+    pngImage: fusion,
     brand: "Ford",
     model: "Fusion",
     year: "2015",
@@ -63,6 +79,7 @@ export const VehicleList = [
   {
     id: 4,
     image: hondaCrv,
+    pngImage: crv,
     brand: "Honda",
     model: "CR-V",
     year: "2018",
@@ -75,6 +92,7 @@ export const VehicleList = [
   {
     id: 5,
     image: toyotaCamry,
+    pngImage: camry,
     brand: "Toyota",
     model: "Camry",
     year: "2022",
@@ -87,6 +105,7 @@ export const VehicleList = [
   {
     id: 6,
     image: kiaOptima,
+    pngImage: optima,
     brand: "Kia",
     model: "Optima",
     year: "2015",
@@ -99,6 +118,7 @@ export const VehicleList = [
   {
     id: 7,
     image: jeepCherokee,
+    pngImage: cherokee,
     brand: "Jeep",
     model: "Cherokee",
     year: "2017",
@@ -111,6 +131,7 @@ export const VehicleList = [
   {
     id: 8,
     image: hyundaySonata,
+    pngImage: sonata,
     brand: "Hyunday",
     model: "Sonata",
     year: "2016",
@@ -123,6 +144,7 @@ export const VehicleList = [
   {
     id: 9,
     image: subaruOutback,
+    pngImage: outback,
     brand: "Subaru",
     model: "Outback",
     year: "2019",
@@ -135,6 +157,7 @@ export const VehicleList = [
   {
     id: 10,
     image: volkswagenJetta,
+    pngImage: jetta,
     brand: "Volkswagen",
     model: "Jetta",
     year: "2017",
@@ -147,6 +170,7 @@ export const VehicleList = [
   {
     id: 11,
     image: nissanQuest,
+    pngImage: quest,
     brand: "Nissan",
     model: "Quest",
     year: "2014",

@@ -39,13 +39,15 @@ const Inputs = () => {
   // STATE CONSTANTS
   const [inputError, setInputError] = useState(false);
   const [modal, setModal] = useState(false);
-  const [selectedCar, setSelectedCar] = useState({ brand: "", model: "", image: "" });
+  const [selectedCar, setSelectedCar] = useState({ brand: "", model: "", image: "", pngImage: "" });
   const { inputValues, handleInputChange } = useForm({
     carType: "",
     pickLocation: "",
     dropLocation: "",
     pickDate: "",
     dropDate: "",
+    pickTime: "",
+    dropTime: "",
   });
 
   // LIFE CYCLE
@@ -71,7 +73,12 @@ const Inputs = () => {
       );
 
       if (selectedVehicle) {
-        setSelectedCar({ brand: selectedVehicle.brand, model: selectedVehicle.model, image: selectedVehicle.image });
+        setSelectedCar({
+          brand: selectedVehicle.brand,
+          model: selectedVehicle.model,
+          image: selectedVehicle.image,
+          pngImage: selectedVehicle.pngImage,
+        });
       }
     }
   };
@@ -222,7 +229,14 @@ const Inputs = () => {
         </StyledSearchButton>
       </StyledInputGrid>
 
-      {modal && <BookModal selectedCar={selectedCar} inputValues={inputValues} setModal={setModal} />}
+      {modal && (
+        <BookModal
+          selectedCar={selectedCar}
+          inputValues={inputValues}
+          setModal={setModal}
+          handleInputChange={handleInputChange}
+        />
+      )}
     </StyledInputsContainer>
   );
 };
