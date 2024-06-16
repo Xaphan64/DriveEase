@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const StyledInputsContainer = styled.div<InputsProps>`
-  background-color: #232627;
+  background-color: ${(props) => props.$backgroundColor};
   padding: ${(props) => props.$padding};
   margin: ${(props) => props.$margin};
   display: flex;
   flex-direction: ${(props) => props.$flexDirection};
   gap: ${(props) => props.$gap};
   align-items: ${(props) => props.$alignItems};
+  justify-content: ${(props) => props.$justifyContent};
   border-radius: ${(props) => props.$borderRadius};
 
   @media screen and (max-width: ${(props) => props.$mediaQuery}) {
@@ -21,6 +22,9 @@ export const StyledInputText = styled.span<InputsProps>`
   font-weight: ${(props) => props.fontWeight};
   color: ${(props) => props.color};
   text-transform: ${(props) => props.$textTransform};
+  display: flex;
+  align-items: ${(props) => props.$alignItems};
+  gap: ${(props) => props.$gap};
 `;
 
 export const StyledInputGrid = styled.form`
@@ -61,15 +65,15 @@ export const StyledErrorMessage = styled.div`
   align-items: center;
 `;
 
-export const StyledCancelButton = styled.button`
+export const StyledCancelButton = styled.button<InputsProps>`
   border: none;
   background-color: transparent;
-  color: #e1868f;
+  color: ${(props) => props.color};
   cursor: pointer;
 
   svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 `;
 
@@ -107,6 +111,33 @@ export const StyledSearchButton = styled.button`
   }
 `;
 
+export const StyledModalBackground = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+`;
+
+export const StyledModal = styled.div`
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gray;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  // de sters TODO:
+  width: 830px;
+`;
+
 type InputsProps = {
   fontSize?: string;
   fontWeight?: string;
@@ -117,6 +148,8 @@ type InputsProps = {
   $flexDirection?: string;
   $margin?: string;
   $alignItems?: string;
+  $justifyContent?: string;
   $borderRadius?: string;
   $mediaQuery?: string;
+  $backgroundColor?: string;
 };

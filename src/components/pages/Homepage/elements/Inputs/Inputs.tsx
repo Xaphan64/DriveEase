@@ -24,6 +24,7 @@ import { useState } from "react";
 // MISC
 import { useForm } from "../../../../hooks/useForm";
 import { CityList, VehicleList } from "../../../../cards/VehicleCard/VehicleList";
+import BookModal from "./BookModal";
 
 // COMPONENTS
 
@@ -38,6 +39,7 @@ const Inputs = () => {
   // STATE CONSTANTS
   const [inputError, setInputError] = useState(false);
   const [modal, setModal] = useState(false);
+  const [selectedCar, setSelectedCar] = useState({ brand: "", model: "", image: "" });
   const { inputValues, handleInputChange } = useForm({
     carType: "",
     pickLocation: "",
@@ -61,9 +63,16 @@ const Inputs = () => {
     ) {
       setInputError(true);
     } else {
-      console.log("The input data:", inputValues);
       setInputError(false);
       setModal(true);
+
+      const selectedVehicle = VehicleList.find(
+        (vehicle) => `${vehicle.brand} ${vehicle.model}` === inputValues.carType
+      );
+
+      if (selectedVehicle) {
+        setSelectedCar({ brand: selectedVehicle.brand, model: selectedVehicle.model, image: selectedVehicle.image });
+      }
     }
   };
 
@@ -75,6 +84,7 @@ const Inputs = () => {
       $margin="32px"
       $borderRadius="4px"
       $mediaQuery="400px"
+      $backgroundColor="#232627"
     >
       <StyledInputText fontSize="26px" fontWeight="bold">
         Book a car
@@ -84,7 +94,7 @@ const Inputs = () => {
         <StyledErrorMessage>
           <StyledInputText color="#e1868f">All fields required!</StyledInputText>
 
-          <StyledCancelButton onClick={() => setInputError(false)}>
+          <StyledCancelButton onClick={() => setInputError(false)} color="#e1868f">
             <CloseIcon />
           </StyledCancelButton>
         </StyledErrorMessage>
@@ -212,7 +222,7 @@ const Inputs = () => {
         </StyledSearchButton>
       </StyledInputGrid>
 
-      {modal && <div>modal opened</div>}
+      {modal && <BookModal selectedCar={selectedCar} inputValues={inputValues} setModal={setModal} />}
     </StyledInputsContainer>
   );
 };
