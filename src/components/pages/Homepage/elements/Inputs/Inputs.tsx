@@ -39,7 +39,7 @@ const Inputs = () => {
   // STATE CONSTANTS
   const [inputError, setInputError] = useState(false);
   const [modal, setModal] = useState(false);
-  const [selectedCar, setSelectedCar] = useState({ brand: "", model: "", image: "", pngImage: "" });
+  const [selectedCar, setSelectedCar] = useState({ brand: "", model: "", pngImage: "" });
   const { inputValues, handleInputChange } = useForm({
     carType: "",
     pickLocation: "",
@@ -48,6 +48,14 @@ const Inputs = () => {
     dropDate: "",
     pickTime: "",
     dropTime: "",
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    age: "",
+    email: "",
+    address: "",
+    city: "",
+    zipCode: "",
   });
 
   // LIFE CYCLE
@@ -76,7 +84,6 @@ const Inputs = () => {
         setSelectedCar({
           brand: selectedVehicle.brand,
           model: selectedVehicle.model,
-          image: selectedVehicle.image,
           pngImage: selectedVehicle.pngImage,
         });
       }
@@ -112,7 +119,7 @@ const Inputs = () => {
           <StyledInputsContainer $gap="4px" $alignItems="center">
             <DirectionsCarIcon />
 
-            <StyledInputsContainer>
+            <StyledInputsContainer $gap="4px">
               <StyledInputText fontWeight="bold" $textTransform="capitalize">
                 select your car type
               </StyledInputText>
@@ -140,7 +147,7 @@ const Inputs = () => {
           <StyledInputsContainer $gap="4px" $alignItems="center">
             <LocationOnIcon />
 
-            <StyledInputsContainer>
+            <StyledInputsContainer $gap="4px">
               <StyledInputText fontWeight="bold" $textTransform="capitalize">
                 pick-up
               </StyledInputText>
@@ -166,7 +173,7 @@ const Inputs = () => {
           <StyledInputsContainer $gap="4px" $alignItems="center">
             <LocationOnIcon />
 
-            <StyledInputsContainer>
+            <StyledInputsContainer $gap="4px">
               <StyledInputText fontWeight="bold" $textTransform="capitalize">
                 drop-off
               </StyledInputText>
@@ -192,7 +199,7 @@ const Inputs = () => {
           <StyledInputsContainer $gap="4px" $alignItems="center">
             <TodayIcon />
 
-            <StyledInputsContainer>
+            <StyledInputsContainer $gap="4px">
               <StyledInputText fontWeight="bold" $textTransform="capitalize">
                 pick-up
               </StyledInputText>
@@ -210,7 +217,7 @@ const Inputs = () => {
           <StyledInputsContainer $gap="4px" $alignItems="center">
             <InsertInvitationIcon />
 
-            <StyledInputsContainer>
+            <StyledInputsContainer $gap="4px">
               <StyledInputText fontWeight="bold" $textTransform="capitalize">
                 drop-off
               </StyledInputText>

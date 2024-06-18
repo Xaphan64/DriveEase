@@ -26,6 +26,7 @@ export const StyledInputText = styled.span<InputsProps>`
   display: flex;
   align-items: ${(props) => props.$alignItems};
   gap: ${(props) => props.$gap};
+  word-spacing: ${(props) => props.$wordSpacing};
 `;
 
 export const StyledInputGrid = styled.form`
@@ -101,6 +102,11 @@ export const StyledTimeInput = styled(StyledDateInput)`
   letter-spacing: 2px;
 `;
 
+export const StyledModalInput = styled(StyledDateInput)`
+  border-radius: 0px;
+  margin: 0;
+`;
+
 export const StyledSearchButton = styled.button`
   padding: 8px;
   font-size: 16px;
@@ -143,6 +149,8 @@ export const StyledModal = styled.form`
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 700px;
+  height: 100%;
+  overflow-y: scroll;
 `;
 
 export const StyledModalImage = styled.img`
@@ -150,6 +158,12 @@ export const StyledModalImage = styled.img`
   max-height: 300px;
   height: auto;
   width: 100%;
+`;
+
+export const StyledModalGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 `;
 
 type InputsProps = {
@@ -167,4 +181,5 @@ type InputsProps = {
   $mediaQuery?: string;
   $backgroundColor?: string;
   $borderBottom?: string;
+  $wordSpacing?: string;
 };
