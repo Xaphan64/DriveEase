@@ -105,6 +105,7 @@ export const StyledTimeInput = styled(StyledDateInput)`
 export const StyledModalInput = styled(StyledDateInput)`
   border-radius: 0px;
   margin: 0;
+  color: #ffffff;
 `;
 
 export const StyledSearchButton = styled.button`
@@ -149,7 +150,7 @@ export const StyledModal = styled.form`
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 700px;
-  height: 100%;
+  height: 95%;
   overflow-y: scroll;
 `;
 
@@ -160,9 +161,9 @@ export const StyledModalImage = styled.img`
   width: 100%;
 `;
 
-export const StyledModalGrid = styled.div`
+export const StyledModalGrid = styled.div<InputsProps>`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: ${(props) => props.$gridColumns};
   gap: 24px;
 `;
 
@@ -182,4 +183,5 @@ type InputsProps = {
   $backgroundColor?: string;
   $borderBottom?: string;
   $wordSpacing?: string;
+  $gridColumns?: string;
 };

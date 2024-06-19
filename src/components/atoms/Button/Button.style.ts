@@ -42,6 +42,10 @@ export const StyledButton = styled(Button)<ButtonProps>`
   }
 `;
 
+export const StyledModalButton = styled(StyledButton)`
+  border-radius: 0px;
+`;
+
 type ButtonProps = {
   width?: string;
   $backgroundColor?: string;

@@ -17,6 +17,7 @@ import {
   StyledModalInput,
   StyledTimeInput,
 } from "./Inputs.style";
+import { StyledModalButton } from "../../../../atoms/Button/Button.style";
 
 // LIBRARIES
 
@@ -51,6 +52,10 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
     console.log("lastName:", inputValues.lastName);
     console.log("phoneNumber:", inputValues.phoneNumber);
     console.log("age:", inputValues.age);
+    console.log("email:", inputValues.email);
+    console.log("address:", inputValues.address);
+    console.log("city:", inputValues.city);
+    console.log("zipCode:", inputValues.zipCode);
   };
 
   return (
@@ -172,7 +177,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
             personal information
           </StyledInputText>
 
-          <StyledModalGrid>
+          <StyledModalGrid $gridColumns="1fr 1fr">
             <StyledInputsContainer $flexDirection="column" $gap="8px">
               <StyledInputsContainer $gap="4px">
                 <StyledInputText $textTransform="capitalize" color="gray" fontWeight="bold">
@@ -266,16 +271,112 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
             </StyledInputsContainer>
           </StyledModalGrid>
 
-          <div>input</div>
+          <StyledModalGrid $gridColumns="1fr">
+            <StyledInputsContainer $flexDirection="column" $gap="8px">
+              <StyledInputsContainer $gap="4px">
+                <StyledInputText $textTransform="capitalize" color="gray" fontWeight="bold">
+                  email
+                </StyledInputText>
 
-          <div>input</div>
+                <StyledInputText fontWeight="bold" color="#f2613f">
+                  *
+                </StyledInputText>
+              </StyledInputsContainer>
 
-          <div>input</div>
+              <StyledModalInput
+                name="email"
+                value={inputValues.email}
+                onChange={handleInputChange}
+                placeholder="Enter your email address"
+              />
+
+              <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
+                This field is required.
+              </StyledInputText>
+            </StyledInputsContainer>
+
+            <StyledInputsContainer $flexDirection="column" $gap="8px">
+              <StyledInputsContainer $gap="4px">
+                <StyledInputText $textTransform="capitalize" color="gray" fontWeight="bold">
+                  address
+                </StyledInputText>
+
+                <StyledInputText fontWeight="bold" color="#f2613f">
+                  *
+                </StyledInputText>
+              </StyledInputsContainer>
+
+              <StyledModalInput
+                name="address"
+                value={inputValues.address}
+                onChange={handleInputChange}
+                placeholder="Enter your street address"
+              />
+
+              <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
+                This field is required.
+              </StyledInputText>
+            </StyledInputsContainer>
+          </StyledModalGrid>
+
+          <StyledModalGrid $gridColumns="1fr 1fr">
+            <StyledInputsContainer $flexDirection="column" $gap="8px">
+              <StyledInputsContainer $gap="4px">
+                <StyledInputText $textTransform="capitalize" color="gray" fontWeight="bold">
+                  city
+                </StyledInputText>
+
+                <StyledInputText fontWeight="bold" color="#f2613f">
+                  *
+                </StyledInputText>
+              </StyledInputsContainer>
+
+              <StyledModalInput
+                name="city"
+                value={inputValues.city}
+                onChange={handleInputChange}
+                placeholder="Enter your city"
+              />
+
+              <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
+                This field is required.
+              </StyledInputText>
+            </StyledInputsContainer>
+
+            <StyledInputsContainer $flexDirection="column" $gap="8px">
+              <StyledInputsContainer $gap="4px">
+                <StyledInputText $textTransform="capitalize" color="gray" fontWeight="bold">
+                  zip code
+                </StyledInputText>
+
+                <StyledInputText fontWeight="bold" color="#f2613f">
+                  *
+                </StyledInputText>
+              </StyledInputsContainer>
+
+              <StyledModalInput
+                name="zipCode"
+                value={inputValues.zipCode}
+                onChange={handleInputChange}
+                placeholder="Enter your zip code"
+              />
+
+              <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
+                This field is required.
+              </StyledInputText>
+            </StyledInputsContainer>
+          </StyledModalGrid>
         </StyledInputsContainer>
 
-        <button onClick={handleSubmit} type="submit">
-          submit
-        </button>
+        <StyledModalButton
+          type="submit"
+          onClick={handleSubmit}
+          $backgroundColor="#f2613f"
+          hoverColor="#ffffff"
+          $hoverBackgroundColor="#fa4226"
+        >
+          Reserve Now
+        </StyledModalButton>
       </StyledModal>
     </StyledModalBackground>
   );
