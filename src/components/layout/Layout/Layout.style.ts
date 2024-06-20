@@ -21,16 +21,3 @@ export const StyledContainer = styled.div<HeaderProps>`
     width: 100%;
   }
 `;
-
-export const WorkInProgress = styled.h1`
-  position: fixed;
-  color: red;
-  font-size: 48px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-`;

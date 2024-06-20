@@ -58,8 +58,8 @@ export const StyledOption = styled.option`
   font-size: 16px;
 `;
 
-export const StyledErrorMessage = styled.div`
-  background-color: #430c11;
+export const StyledErrorMessage = styled.div<InputsProps>`
+  background-color: ${(props) => props.$backgroundColor};
   padding: 8px;
   display: flex;
   justify-content: space-between;
@@ -94,18 +94,20 @@ export const StyledDateInput = styled.input`
   }
 `;
 
-export const StyledTimeInput = styled(StyledDateInput)`
+export const StyledTimeInput = styled(StyledDateInput)<InputsProps>`
   padding: 0 4px;
   margin: 0px;
   text-align: center;
   color: #ffffff;
   letter-spacing: 2px;
+  border: ${(props) => (props.$error ? "1px solid red" : "1px solid gray")};
 `;
 
-export const StyledModalInput = styled(StyledDateInput)`
+export const StyledModalInput = styled(StyledDateInput)<InputsProps>`
   border-radius: 0px;
   margin: 0;
   color: #ffffff;
+  border: ${(props) => (props.$error ? "1px solid red" : "1px solid gray")};
 `;
 
 export const StyledSearchButton = styled.button`
@@ -149,7 +151,7 @@ export const StyledModal = styled.form`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 700px;
+  width: 700px;
   height: 95%;
   overflow-y: scroll;
 `;
@@ -184,4 +186,5 @@ type InputsProps = {
   $borderBottom?: string;
   $wordSpacing?: string;
   $gridColumns?: string;
+  $error?: boolean;
 };

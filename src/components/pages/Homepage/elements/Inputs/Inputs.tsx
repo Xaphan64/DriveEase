@@ -24,9 +24,9 @@ import { useState } from "react";
 // MISC
 import { useForm } from "../../../../hooks/useForm";
 import { CityList, VehicleList } from "../../../../cards/VehicleCard/VehicleList";
-import BookModal from "./BookModal";
 
 // COMPONENTS
+import BookModal from "./BookModal";
 
 // CONFIGURATION
 const Inputs = () => {
@@ -38,6 +38,7 @@ const Inputs = () => {
 
   // STATE CONSTANTS
   const [inputError, setInputError] = useState(false);
+  const [inputCorfirm, setInputConfirm] = useState(false);
   const [modal, setModal] = useState(false);
   const [selectedCar, setSelectedCar] = useState({ brand: "", model: "", pngImage: "" });
   const { inputValues, handleInputChange } = useForm({
@@ -57,6 +58,18 @@ const Inputs = () => {
     city: "",
     zipCode: "",
   });
+  const [modalError, setModalError] = useState({
+    pickTime: false,
+    dropTime: false,
+    firstName: false,
+    lastName: false,
+    phoneNumber: false,
+    age: false,
+    email: false,
+    address: false,
+    city: false,
+    zipCode: false,
+  });
 
   // LIFE CYCLE
 
@@ -72,6 +85,7 @@ const Inputs = () => {
       inputValues.dropDate === ""
     ) {
       setInputError(true);
+      setInputConfirm(false);
     } else {
       setInputError(false);
       setModal(true);
@@ -90,6 +104,41 @@ const Inputs = () => {
     }
   };
 
+  const handleModalSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    if (
+      inputValues.pickTime === "" ||
+      inputValues.dropTime === "" ||
+      inputValues.firstName === "" ||
+      inputValues.lastName === "" ||
+      inputValues.phoneNumber === "" ||
+      inputValues.age === "" ||
+      inputValues.email === "" ||
+      inputValues.address === "" ||
+      inputValues.city === "" ||
+      inputValues.zipCode === ""
+    ) {
+      setInputConfirm(false);
+    } else {
+      setInputConfirm(true);
+      setInputError(false);
+      setModal(false);
+    }
+
+    if (inputValues.pickTime === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        pickTime: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        pickTime: false,
+      }));
+    }
+  };
+
   return (
     <StyledInputsContainer
       $padding="32px 48px"
@@ -105,10 +154,20 @@ const Inputs = () => {
       </StyledInputText>
 
       {inputError && (
-        <StyledErrorMessage>
+        <StyledErrorMessage $backgroundColor="#430c11">
           <StyledInputText color="#e1868f">All fields required!</StyledInputText>
 
           <StyledCancelButton onClick={() => setInputError(false)} color="#e1868f">
+            <CloseIcon />
+          </StyledCancelButton>
+        </StyledErrorMessage>
+      )}
+
+      {inputCorfirm && (
+        <StyledErrorMessage $backgroundColor="#205607">
+          <StyledInputText color="#a1e68c">Check your email to confirm the reservation!</StyledInputText>
+
+          <StyledCancelButton onClick={() => setInputConfirm(false)} color="#a1e68c">
             <CloseIcon />
           </StyledCancelButton>
         </StyledErrorMessage>
@@ -242,6 +301,8 @@ const Inputs = () => {
           inputValues={inputValues}
           setModal={setModal}
           handleInputChange={handleInputChange}
+          handleModalSubmit={handleModalSubmit}
+          modalError={modalError}
         />
       )}
     </StyledInputsContainer>

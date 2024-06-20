@@ -31,9 +31,18 @@ type BookModalProps = {
   inputValues: any;
   setModal: any;
   handleInputChange: any;
+  handleModalSubmit: any;
+  modalError: any;
 };
 
-const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModal, handleInputChange }) => {
+const BookModal: React.FC<BookModalProps> = ({
+  selectedCar,
+  inputValues,
+  setModal,
+  handleInputChange,
+  handleModalSubmit,
+  modalError,
+}) => {
   // PROPERTIES
 
   // API REQUESTS
@@ -45,18 +54,6 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
   // LIFE CYCLE
 
   // EVENT HANDLERS
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-
-    console.log("firstName:", inputValues.firstName);
-    console.log("lastName:", inputValues.lastName);
-    console.log("phoneNumber:", inputValues.phoneNumber);
-    console.log("age:", inputValues.age);
-    console.log("email:", inputValues.email);
-    console.log("address:", inputValues.address);
-    console.log("city:", inputValues.city);
-    console.log("zipCode:", inputValues.zipCode);
-  };
 
   return (
     <StyledModalBackground>
@@ -103,6 +100,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
                     name="pickTime"
                     value={inputValues.pickTime}
                     onChange={handleInputChange}
+                    $error={modalError.pickTime}
                   />
                 </StyledInputText>
               </StyledInputsContainer>
@@ -123,6 +121,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
                     name="dropTime"
                     value={inputValues.dropTime}
                     onChange={handleInputChange}
+                    $error={modalError.dropTime}
                   />
                 </StyledInputText>
               </StyledInputsContainer>
@@ -194,6 +193,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
                 value={inputValues.firstName}
                 onChange={handleInputChange}
                 placeholder="Enter your first name"
+                $error={modalError.firstName}
               />
 
               <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
@@ -217,6 +217,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
                 value={inputValues.lastName}
                 onChange={handleInputChange}
                 placeholder="Enter your last name"
+                $error={modalError.lastName}
               />
 
               <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
@@ -240,6 +241,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
                 value={inputValues.phoneNumber}
                 onChange={handleInputChange}
                 placeholder="Enter your phone number"
+                $error={modalError.phoneNumber}
               />
 
               <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
@@ -263,6 +265,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
                 value={inputValues.age}
                 onChange={handleInputChange}
                 placeholder="Enter your age"
+                $error={modalError.age}
               />
 
               <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
@@ -288,6 +291,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
                 value={inputValues.email}
                 onChange={handleInputChange}
                 placeholder="Enter your email address"
+                $error={modalError.email}
               />
 
               <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
@@ -311,6 +315,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
                 value={inputValues.address}
                 onChange={handleInputChange}
                 placeholder="Enter your street address"
+                $error={modalError.address}
               />
 
               <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
@@ -336,6 +341,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
                 value={inputValues.city}
                 onChange={handleInputChange}
                 placeholder="Enter your city"
+                $error={modalError.city}
               />
 
               <StyledInputText fontSize="10px" $wordSpacing="-0.5px">
@@ -370,7 +376,7 @@ const BookModal: React.FC<BookModalProps> = ({ selectedCar, inputValues, setModa
 
         <StyledModalButton
           type="submit"
-          onClick={handleSubmit}
+          onClick={(event) => handleModalSubmit(event)}
           $backgroundColor="#f2613f"
           hoverColor="#ffffff"
           $hoverBackgroundColor="#fa4226"
