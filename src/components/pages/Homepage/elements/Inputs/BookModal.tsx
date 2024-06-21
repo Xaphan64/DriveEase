@@ -79,7 +79,12 @@ const BookModal: React.FC<BookModalProps> = ({
           </StyledInputText>
         </StyledInputsContainer>
 
-        <StyledInputsContainer $padding="24px 16px" $justifyContent="space-between" $borderBottom="1px solid gray">
+        <StyledInputsContainer
+          $padding="24px 16px"
+          $justifyContent="space-between"
+          $borderBottom="1px solid gray"
+          $modalMediaQuery="600px"
+        >
           <StyledInputsContainer $flexDirection="column" $gap="24px">
             <StyledInputText color="#f2613f" fontSize="20px" fontWeight="bold">
               Location & Date
@@ -156,7 +161,7 @@ const BookModal: React.FC<BookModalProps> = ({
             </StyledInputsContainer>
           </StyledInputsContainer>
 
-          <StyledInputsContainer $flexDirection="column" $gap="24px">
+          <StyledInputsContainer $flexDirection="column" $gap="24px" $modalMediaQuery="600px">
             <StyledInputsContainer $gap="4px">
               <StyledInputText fontSize="20px" fontWeight="bold">
                 Car -
@@ -176,7 +181,7 @@ const BookModal: React.FC<BookModalProps> = ({
             personal information
           </StyledInputText>
 
-          <StyledModalGrid $gridColumns="1fr 1fr">
+          <StyledModalGrid $gridColumns="1fr 1fr" $modalMediaQueryGrid="500px">
             <StyledInputsContainer $flexDirection="column" $gap="8px">
               <StyledInputsContainer $gap="4px">
                 <StyledInputText $textTransform="capitalize" color="gray" fontWeight="bold">
@@ -324,7 +329,7 @@ const BookModal: React.FC<BookModalProps> = ({
             </StyledInputsContainer>
           </StyledModalGrid>
 
-          <StyledModalGrid $gridColumns="1fr 1fr">
+          <StyledModalGrid $gridColumns="1fr 1fr" $modalMediaQueryGrid="500px">
             <StyledInputsContainer $flexDirection="column" $gap="8px">
               <StyledInputsContainer $gap="4px">
                 <StyledInputText $textTransform="capitalize" color="gray" fontWeight="bold">

@@ -137,6 +137,114 @@ const Inputs = () => {
         pickTime: false,
       }));
     }
+
+    if (inputValues.dropTime === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        dropTime: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        dropTime: false,
+      }));
+    }
+
+    if (inputValues.firstName === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        firstName: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        firstName: false,
+      }));
+    }
+
+    if (inputValues.lastName === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        lastName: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        lastName: false,
+      }));
+    }
+
+    if (inputValues.phoneNumber === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        phoneNumber: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        phoneNumber: false,
+      }));
+    }
+
+    if (inputValues.age === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        age: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        age: false,
+      }));
+    }
+
+    if (inputValues.email === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        email: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        email: false,
+      }));
+    }
+
+    if (inputValues.address === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        address: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        address: false,
+      }));
+    }
+
+    if (inputValues.city === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        city: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        city: false,
+      }));
+    }
+
+    if (inputValues.zipCode === "") {
+      setModalError((prevState) => ({
+        ...prevState,
+        zipCode: true,
+      }));
+    } else {
+      setModalError((prevState) => ({
+        ...prevState,
+        zipCode: false,
+      }));
+    }
   };
 
   return (

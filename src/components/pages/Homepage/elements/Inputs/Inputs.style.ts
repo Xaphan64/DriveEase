@@ -16,6 +16,12 @@ export const StyledInputsContainer = styled.div<InputsProps>`
     padding: 12px 20px;
     margin: 16px;
   }
+
+  @media screen and (max-width: ${(props) => props.$modalMediaQuery}) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 `;
 
 export const StyledInputText = styled.span<InputsProps>`
@@ -154,6 +160,11 @@ export const StyledModal = styled.form`
   width: 700px;
   height: 95%;
   overflow-y: scroll;
+
+  @media screen and (max-width: 720px) {
+    width: 100%;
+    max-width: 700px;
+  }
 `;
 
 export const StyledModalImage = styled.img`
@@ -167,6 +178,10 @@ export const StyledModalGrid = styled.div<InputsProps>`
   display: grid;
   grid-template-columns: ${(props) => props.$gridColumns};
   gap: 24px;
+
+  @media screen and (max-width: ${(props) => props.$modalMediaQueryGrid}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 type InputsProps = {
@@ -187,4 +202,6 @@ type InputsProps = {
   $wordSpacing?: string;
   $gridColumns?: string;
   $error?: boolean;
+  $modalMediaQuery?: string;
+  $modalMediaQueryGrid?: string;
 };
