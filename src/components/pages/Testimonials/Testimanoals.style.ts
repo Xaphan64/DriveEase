@@ -7,6 +7,7 @@ export const StyledTestimonial = styled.div`
   align-items: center;
   gap: 64px;
   text-align: center;
+  margin: 50px 0;
 `;
 
 export const StyledTestimonialContainer = styled.div`

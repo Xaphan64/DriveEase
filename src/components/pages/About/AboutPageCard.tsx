@@ -27,7 +27,7 @@ const AboutPageCard = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledAbout $flexDirection="column" $textAlign="center" $gap="64px">
+    <StyledAbout $flexDirection="column" $textAlign="center" $gap="64px" $margin="50px 0">
       <StyledTextContainer>
         <StyledText fontSize="32px">Plan your trip now</StyledText>
         <StyledText fontSize="48px" fontWeight="bold">

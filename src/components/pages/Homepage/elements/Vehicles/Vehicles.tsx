@@ -24,7 +24,7 @@ const Vehicles = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledVehiclesContainer $flexDirection="column" $gap="40px" $alignItems="center">
+    <StyledVehiclesContainer $flexDirection="column" $gap="40px" $alignItems="center" $margin="100px 0">
       <StyledVehiclesContainer $flexDirection="column" $gap="16px" $alignItems="center">
         <StyledVehiclesText fontSize="24px" fontWeight="bold">
           Vehicle Models

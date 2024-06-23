@@ -23,7 +23,7 @@ const Questions = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledQuestionsContainer $gap="16px">
+    <StyledQuestionsContainer $gap="16px" $margin="50px 0">
       <StyledQuestionsImage />
 
       <StyledQuestionsText fontSize="24px" fontWeight="bold">

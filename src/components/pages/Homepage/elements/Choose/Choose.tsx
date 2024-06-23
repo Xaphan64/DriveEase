@@ -31,7 +31,7 @@ const Choose = () => {
 
   // EVENT HANDLERS
   return (
-    <StyledChooseContainer $flexDirection="column">
+    <StyledChooseContainer $flexDirection="column" $margin="0 0 50px 0" $mediaQueryMargin="1040px">
       <StyledChooseImage>
         <img src={chooseCars} alt="" />
       </StyledChooseImage>
@@ -41,10 +41,10 @@ const Choose = () => {
           <StyledChooseText fontSize="28px" fontWeight="bold">
             Why Choose Us
           </StyledChooseText>
-          <StyledChooseText fontSize="48px" fontWeight="bold" $maxWidth="550px">
+          <StyledChooseText fontSize="48px" fontWeight="bold" $maxWidth="550px" $mediaQueryText="600px">
             Best valued deals you will ever find
           </StyledChooseText>
-          <StyledChooseText $maxWidth="550px" color="lightgray" $lineHeight="1.5">
+          <StyledChooseText $maxWidth="550px" color="lightgray" $lineHeight="1.5" $mediaQueryText="600px">
             Discover the best deals you'll ever find with our unbeatable offers. We're dedicated to providing you with
             the best value for your money, so you can enjoy top-quality services and products without breaking the bank.
             Our deals are designed to give you the ultimate renting experience, so don't miss out on your chance to save
@@ -64,7 +64,7 @@ const Choose = () => {
         </StyledChooseContainer>
 
         <StyledChooseContainer $flexDirection="column" $gap="32px">
-          <StyledChooseContainer $alignItems="center" $gap="8px">
+          <StyledChooseContainer $alignItems="center" $gap="8px" $mediaQueryPadding="420px">
             <StyledChooseSvg>
               <EmojiTransportationIcon />
             </StyledChooseSvg>
@@ -81,7 +81,7 @@ const Choose = () => {
             </StyledChooseContainer>
           </StyledChooseContainer>
 
-          <StyledChooseContainer $alignItems="center" $gap="8px">
+          <StyledChooseContainer $alignItems="center" $gap="8px" $mediaQueryPadding="420px">
             <StyledChooseSvg>
               <MonetizationOnIcon />
             </StyledChooseSvg>
@@ -97,7 +97,7 @@ const Choose = () => {
             </StyledChooseContainer>
           </StyledChooseContainer>
 
-          <StyledChooseContainer $alignItems="center" $gap="8px">
+          <StyledChooseContainer $alignItems="center" $gap="8px" $mediaQueryPadding="420px">
             <StyledChooseSvg>
               <CurrencyExchangeIcon />
             </StyledChooseSvg>

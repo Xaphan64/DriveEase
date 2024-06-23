@@ -11,6 +11,7 @@ export const StyledQuestionsContainer = styled.div<FAQProps>`
   border: ${(props) => props.$border};
   padding: ${(props) => props.$padding};
   max-width: ${(props) => props.$maxWidth};
+  margin: ${(props) => props.$margin};
   position: relative;
 `;
 
@@ -49,4 +50,5 @@ type FAQProps = {
   $gap?: string;
   $backgroundColor?: string;
   $maxWidth?: string;
+  $margin?: string;
 };

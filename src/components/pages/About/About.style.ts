@@ -14,10 +14,11 @@ export const StyledAbout = styled.div<AboutProps>`
   gap: ${(props) => props.$gap};
   flex-direction: ${(props) => props.$flexDirection};
   text-align: ${(props) => props.$textAlign};
+  margin: ${(props) => props.$margin};
 
   @media screen and (max-width: 1050px) {
     flex-direction: column;
-    margin: 0;
+    margin: 50px 0;
   }
 `;
 
@@ -87,4 +88,5 @@ type AboutProps = {
   width?: string;
   $mediaQuery?: string;
   $alignItems?: string;
+  $margin?: string;
 };
