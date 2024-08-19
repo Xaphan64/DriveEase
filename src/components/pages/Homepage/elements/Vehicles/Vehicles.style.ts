@@ -7,6 +7,8 @@ export const StyledVehiclesContainer = styled.div<VehiclesProps>`
   justify-content: ${(props) => props.$justifyContent};
   gap: ${(props) => props.$gap};
   width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  overflow-y: ${(props) => props.overflowY};
   margin: ${(props) => props.$margin};
 `;
 
@@ -29,5 +31,7 @@ type VehiclesProps = {
   $maxWidth?: string;
   $lineHeight?: string;
   width?: string;
+  height?: string;
+  overflowY?: string;
   $margin?: string;
 };

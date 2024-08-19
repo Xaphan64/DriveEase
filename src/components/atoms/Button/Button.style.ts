@@ -46,18 +46,6 @@ export const StyledModalButton = styled(StyledButton)`
   border-radius: 0px;
 `;
 
-type ButtonProps = {
-  width?: string;
-  $backgroundColor?: string;
-  $hoverBackgroundColor?: string;
-  hoverColor?: string;
-  $border?: string;
-  hoverBorder?: string;
-  color?: string;
-  svgColor?: string;
-  $maxWidth?: string;
-};
-
 export const OrangeMobileButton = styled(StyledButton)`
   @media screen and (max-width: 992px) {
     display: none;
@@ -83,3 +71,32 @@ export const MobileButton = styled(Button)`
     display: none;
   }
 `;
+
+export const VehicleButton = styled(StyledButton)<VehicleButtonProps>`
+  border-radius: 0px;
+  justify-content: flex-start;
+  padding-left: 8px;
+  font-size: 20px;
+  background-color: ${(props) => (props.isActive ? "#f2613f" : "#232627")};
+
+  &:hover {
+    background-color: #f2613f;
+    color: #ffffff;
+  }
+`;
+
+type ButtonProps = {
+  width?: string;
+  $backgroundColor?: string;
+  $hoverBackgroundColor?: string;
+  hoverColor?: string;
+  $border?: string;
+  hoverBorder?: string;
+  color?: string;
+  svgColor?: string;
+  $maxWidth?: string;
+};
+
+type VehicleButtonProps = {
+  isActive?: boolean;
+};
