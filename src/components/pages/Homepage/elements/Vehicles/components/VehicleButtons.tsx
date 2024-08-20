@@ -13,7 +13,7 @@ import { VehicleButton } from "../../../../../atoms/Button/Button.style";
 // CONFIGURATION
 type VehicleButtonsProps = {
   vehicleTab: number;
-  handleSwitchTab: any;
+  handleSwitchTab: (index: number) => void;
 };
 
 const VehicleButtons: React.FC<VehicleButtonsProps> = ({ vehicleTab, handleSwitchTab }) => {

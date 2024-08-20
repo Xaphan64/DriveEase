@@ -7,11 +7,11 @@ import { StyledVehiclesContainer, StyledVehiclesText } from "./Vehicles.style";
 import { useState } from "react";
 
 // MISC
-import { VehicleList } from "../../../../cards/VehicleCard/VehicleList";
 
 // COMPONENTS
-import HomepageCard from "../../../../cards/HomepageCard/HomepageCard";
 import VehicleButtons from "./components/VehicleButtons";
+import VehicleImages from "./components/VehicleImages";
+import VehicleSpecs from "./components/VehicleSpecs";
 
 // CONFIGURATION
 const Vehicles = () => {
@@ -48,33 +48,13 @@ const Vehicles = () => {
       </StyledVehiclesContainer>
 
       <StyledVehiclesContainer $justifyContent="space-evenly" width="100%">
-        <StyledVehiclesContainer $flexDirection="column" $gap="8px" height="370px" overflowY="auto">
+        <StyledVehiclesContainer $flexDirection="column" $gap="8px" height="370px" $overflowY="auto">
           <VehicleButtons vehicleTab={vehicleTab} handleSwitchTab={handleSwitchTab} />
         </StyledVehiclesContainer>
 
-        {vehicleTab === 0 && (
-          <div style={{ backgroundColor: "red", height: "400px" }}>
-            <img style={{ width: "600px", height: "auto" }} alt="" src={VehicleList[0].pngImage} />
-          </div>
-        )}
+        <VehicleImages vehicleTab={vehicleTab} />
 
-        {vehicleTab === 1 && (
-          <div style={{ backgroundColor: "red", height: "400px" }}>
-            <img style={{ width: "600px", height: "auto" }} alt="" src={VehicleList[1].pngImage} />
-          </div>
-        )}
-
-        {vehicleTab === 2 && (
-          <div style={{ backgroundColor: "red", height: "400px" }}>
-            <img style={{ width: "600px", height: "auto" }} alt="" src={VehicleList[2].pngImage} />
-          </div>
-        )}
-
-        {vehicleTab === 0 && <HomepageCard index={vehicleTab} />}
-
-        {vehicleTab === 1 && <HomepageCard index={vehicleTab} />}
-
-        {vehicleTab === 2 && <HomepageCard index={vehicleTab} />}
+        <VehicleSpecs vehicleTab={vehicleTab} />
       </StyledVehiclesContainer>
     </StyledVehiclesContainer>
   );

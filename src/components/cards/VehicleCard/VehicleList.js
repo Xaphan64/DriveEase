@@ -35,6 +35,7 @@ export const VehicleList = [
     price: "45",
     ranking: "★★★★",
     fuel: "Hybrid",
+    ac: "Yes",
   },
 
   {
@@ -48,6 +49,7 @@ export const VehicleList = [
     price: "42",
     ranking: "★★★★★",
     fuel: "Gasoline",
+    ac: "Yes",
   },
 
   {
@@ -61,6 +63,7 @@ export const VehicleList = [
     price: "48",
     ranking: "★★★★★",
     fuel: "Diesel",
+    ac: "Yes",
   },
 
   {
@@ -74,6 +77,7 @@ export const VehicleList = [
     price: "38",
     ranking: "★★★",
     fuel: "Gasoline",
+    ac: "Yes",
   },
 
   {
@@ -87,6 +91,7 @@ export const VehicleList = [
     price: "42",
     ranking: "★★★★",
     fuel: "Diesel",
+    ac: "Yes",
   },
 
   {
@@ -100,6 +105,7 @@ export const VehicleList = [
     price: "47",
     ranking: "★★★★★",
     fuel: "Hybrid",
+    ac: "Yes",
   },
 
   {
@@ -113,6 +119,7 @@ export const VehicleList = [
     price: "40",
     ranking: "★★★★",
     fuel: "Gasoline",
+    ac: "Yes",
   },
 
   {
@@ -126,6 +133,7 @@ export const VehicleList = [
     price: "46",
     ranking: "★★★★★",
     fuel: "Hybrid",
+    ac: "Yes",
   },
 
   {
@@ -139,6 +147,7 @@ export const VehicleList = [
     price: "38",
     ranking: "★★★★",
     fuel: "Disesel",
+    ac: "Yes",
   },
 
   {
@@ -152,6 +161,7 @@ export const VehicleList = [
     price: "45",
     ranking: "★★★★★",
     fuel: "Hybrid",
+    ac: "Yes",
   },
 
   {
@@ -165,6 +175,7 @@ export const VehicleList = [
     price: "37",
     ranking: "★★★★",
     fuel: "Gasoline",
+    ac: "Yes",
   },
 
   {
@@ -178,6 +189,7 @@ export const VehicleList = [
     price: "41",
     ranking: "★★★★",
     fuel: "Gasoline",
+    ac: "Yes",
   },
 ];
 

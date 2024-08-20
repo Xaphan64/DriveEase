@@ -370,6 +370,7 @@ const BookModal: React.FC<BookModalProps> = ({
                 value={inputValues.zipCode}
                 onChange={handleInputChange}
                 placeholder="Enter your zip code"
+                $error={modalError.zipCode}
               />
 
               <StyledInputText fontSize="10px" $wordSpacing="-0.5px">

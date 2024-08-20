@@ -8,7 +8,7 @@ export const StyledVehiclesContainer = styled.div<VehiclesProps>`
   gap: ${(props) => props.$gap};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  overflow-y: ${(props) => props.overflowY};
+  overflow-y: ${(props) => props.$overflowY};
   margin: ${(props) => props.$margin};
 `;
 
@@ -19,6 +19,16 @@ export const StyledVehiclesText = styled.div<VehiclesProps>`
   max-width: ${(props) => props.$maxWidth};
   line-height: ${(props) => props.$lineHeight};
   text-align: center;
+`;
+
+export const StyledVehiclesImageContainer = styled.div<VehiclesProps>`
+  height: ${(props) => props.height};
+  max-height: ${(props) => props.maxHeight};
+`;
+
+export const StyledVehiclesImage = styled.img`
+  width: 600px;
+  height: auto;
 `;
 
 type VehiclesProps = {
@@ -32,6 +42,7 @@ type VehiclesProps = {
   $lineHeight?: string;
   width?: string;
   height?: string;
-  overflowY?: string;
+  $overflowY?: string;
   $margin?: string;
+  maxHeight?: string;
 };

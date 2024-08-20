@@ -105,13 +105,13 @@ const Header = () => {
       </StyledMobileButtonContainer>
 
       <StyledButtonContainer>
-        <NavButton type="button" onClick={() => navigate("/login")}>
+        <NavButton type="button" onClick={() => null}>
           login
         </NavButton>
 
         <OrangeMobileButton
           type="button"
-          onClick={() => navigate("/register")}
+          onClick={() => null}
           $backgroundColor="#f2613f"
           hoverColor="#ffffff"
           $hoverBackgroundColor="#fa4226"
