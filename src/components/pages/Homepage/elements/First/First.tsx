@@ -35,7 +35,7 @@ const First = () => {
           Plan your trip now
         </StyledFirstText>
 
-        <StyledFirstText fontSize="48px" fontWeight="bold">
+        <StyledFirstText fontSize="48px" fontWeight="bold" color="#f2613f">
           Save big with our car rental
         </StyledFirstText>
 

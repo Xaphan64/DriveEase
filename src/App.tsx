@@ -34,9 +34,6 @@ const App = () => {
     <BrowserRouter>
       <GlobalStyles />
       <Routes>
-        <Route path="/login" element={<h1>login page</h1>} />
-        <Route path="/register" element={<h1>register page</h1>} />
-
         <Route element={<Layout />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
