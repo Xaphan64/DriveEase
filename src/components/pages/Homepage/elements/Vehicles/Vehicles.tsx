@@ -47,8 +47,14 @@ const Vehicles = () => {
         </StyledVehiclesText>
       </StyledVehiclesContainer>
 
-      <StyledVehiclesContainer $justifyContent="space-evenly" width="100%">
-        <StyledVehiclesContainer $flexDirection="column" $gap="8px" height="370px" $overflowY="auto">
+      <StyledVehiclesContainer $justifyContent="space-evenly" width="100%" $mediaQuery="1150px">
+        <StyledVehiclesContainer
+          $flexDirection="column"
+          $gap="8px"
+          height="370px"
+          $overflowY="auto"
+          $mediaQuery2="1150px"
+        >
           <VehicleButtons vehicleTab={vehicleTab} handleSwitchTab={handleSwitchTab} />
         </StyledVehiclesContainer>
 

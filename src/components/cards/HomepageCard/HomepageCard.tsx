@@ -29,7 +29,7 @@ const HomepageCard: React.FC<HomepageCardProps> = ({ index }) => {
 
   // EVENT HANDLERS
   return (
-    <HomepageCardContainer $flexDirection="column" width="250px" $gap="16px">
+    <HomepageCardContainer $flexDirection="column" width="300px" $gap="16px">
       <HomepageCardContainer $flexDirection="column">
         <HomepageCardContainer
           $backgroundColor="#f2613f"
@@ -50,7 +50,7 @@ const HomepageCard: React.FC<HomepageCardProps> = ({ index }) => {
             $justifyContent="space-evenly"
             $allignItems="center"
             $padding="8px 0"
-            $borderBottom="2px solid #655e53 "
+            $borderBottom="2px solid #655e53"
           >
             <HomepageCardText color="lightgray" width="50%">
               Brand
@@ -66,7 +66,7 @@ const HomepageCard: React.FC<HomepageCardProps> = ({ index }) => {
             $justifyContent="space-evenly"
             $allignItems="center"
             $padding="8px 0"
-            $borderBottom="2px solid #655e53 "
+            $borderBottom="2px solid #655e53"
           >
             <HomepageCardText color="lightgray" width="50%">
               Model
@@ -82,7 +82,7 @@ const HomepageCard: React.FC<HomepageCardProps> = ({ index }) => {
             $justifyContent="space-evenly"
             $allignItems="center"
             $padding="8px 0"
-            $borderBottom="2px solid #655e53 "
+            $borderBottom="2px solid #655e53"
           >
             <HomepageCardText color="lightgray" width="50%">
               Year
@@ -98,7 +98,7 @@ const HomepageCard: React.FC<HomepageCardProps> = ({ index }) => {
             $justifyContent="space-evenly"
             $allignItems="center"
             $padding="8px 0"
-            $borderBottom="2px solid #655e53 "
+            $borderBottom="2px solid #655e53"
           >
             <HomepageCardText color="lightgray" width="50%">
               AC
@@ -114,7 +114,7 @@ const HomepageCard: React.FC<HomepageCardProps> = ({ index }) => {
             $justifyContent="space-evenly"
             $allignItems="center"
             $padding="8px 0"
-            $borderBottom="2px solid #655e53 "
+            $borderBottom="2px solid #655e53"
           >
             <HomepageCardText color="lightgray" width="50%">
               Transmission
@@ -139,11 +139,11 @@ const HomepageCard: React.FC<HomepageCardProps> = ({ index }) => {
 
       <StyledModalButton
         type="button"
-        onClick={() => null}
+        onClick={() => (window.location.href = "#book-ride")}
         $backgroundColor="#f2613f"
         hoverColor="#ffffff"
         $hoverBackgroundColor="#fa4226"
-        width="250px"
+        width="300px"
       >
         RESERVE NOW
       </StyledModalButton>

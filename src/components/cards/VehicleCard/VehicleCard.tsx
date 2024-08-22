@@ -37,6 +37,14 @@ const VehicleCard = (props: VehicleCardProps) => {
   // LIFE CYCLE
 
   // EVENT HANDLERS
+  const handleNavigate = () => {
+    navigate("/");
+
+    setTimeout(() => {
+      window.location.href = "#book-ride";
+    }, 0);
+  };
+
   return (
     <StyledVehicleCardContainer>
       <StyledVehicleImage>
@@ -55,7 +63,7 @@ const VehicleCard = (props: VehicleCardProps) => {
               {props.brand}
             </StyledVehicleText>
             <StyledVehicleText fontSize="32px" fontWeight="bold">
-              {props.price} €
+              {props.price}
             </StyledVehicleText>
           </StyledVehicleTextContainer>
 
@@ -80,7 +88,7 @@ const VehicleCard = (props: VehicleCardProps) => {
         <StyledButton
           width="316px"
           type="button"
-          onClick={() => navigate("/")}
+          onClick={handleNavigate}
           $backgroundColor="#f2613f"
           hoverColor="#ffffff"
           $hoverBackgroundColor="#fa4226"

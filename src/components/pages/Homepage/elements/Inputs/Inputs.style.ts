@@ -144,11 +144,11 @@ export const StyledModalBackground = styled.div`
   right: 0;
   bottom: 0;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
 `;
 
 export const StyledModal = styled.form`
-  z-index: 1;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 1);
   display: flex;
   flex-direction: column;
@@ -159,7 +159,7 @@ export const StyledModal = styled.form`
   transform: translate(-50%, -50%);
   width: 700px;
   height: 95%;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   @media screen and (max-width: 720px) {
     width: 100%;

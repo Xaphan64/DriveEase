@@ -104,6 +104,7 @@ const Footer = () => {
             $backgroundColor="#f2613f"
             hoverColor="#ffffff"
             $hoverBackgroundColor="#fa4226"
+            width="300px"
           >
             subscribe
           </StyledButton>

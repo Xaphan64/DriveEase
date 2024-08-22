@@ -83,6 +83,11 @@ export const VehicleButton = styled(StyledButton)<VehicleButtonProps>`
     background-color: #f2613f;
     color: #ffffff;
   }
+
+  @media screen and (max-width: 1150px) {
+    width: 100%;
+    justify-content: flex-end;
+  }
 `;
 
 type ButtonProps = {

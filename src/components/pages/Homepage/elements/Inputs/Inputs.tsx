@@ -256,6 +256,7 @@ const Inputs = () => {
       $borderRadius="4px"
       $mediaQuery="400px"
       $backgroundColor="#232627"
+      id="book-ride"
     >
       <StyledInputText fontSize="26px" fontWeight="bold">
         Book a car

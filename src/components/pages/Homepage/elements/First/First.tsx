@@ -46,7 +46,7 @@ const First = () => {
         <StyledFirstContainer $flexDirection="row" $gap="32px" $mediaQuery="450px">
           <StyledButton
             type="button"
-            onClick={() => navigate("/")}
+            onClick={() => (window.location.href = "#book-ride")}
             $backgroundColor="#f2613f"
             hoverColor="#ffffff"
             $hoverBackgroundColor="#fa4226"
